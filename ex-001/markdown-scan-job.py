@@ -1,7 +1,7 @@
 
 import sys
 import yaml
-import mod_utilities as MU
+import mdbutilities.mdbutilities as MU
 import markdownvalidator.markdown_scanner as MS
 
 def main():

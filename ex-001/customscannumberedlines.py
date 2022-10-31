@@ -3,7 +3,7 @@ Get a percentage of the topic that has numbered lines.
 '''
 
 import re
-import mod_utilities as MU
+import mdbutilities.mdbutilities as MU
 
 class CountNoLines:
     def __init__(self):
