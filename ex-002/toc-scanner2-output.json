@@ -1,0 +1,396 @@
+[{
+    "node_id": "ff663041-41c9-4774-bb1f-70e4f752d374",
+    "node_type": "content-node",
+    "toc_name": "no name"
+}, {
+    "node_id": "d4e8b61f-29b8-431f-8c69-8f42f3498fbe",
+    "node_type": "content-node",
+    "toc_name": "Application and HR provisioning documentation",
+    "href": "index.yml"
+}, {
+    "node_id": "0c5aeafe-1883-4937-93d6-eb6a993ebbbf",
+    "node_type": "toc-node",
+    "toc_name": "Overview"
+}, {
+    "node_id": "77bf3f62-30d6-4463-8a26-0a7ea1fcc6e0",
+    "node_type": "content-node",
+    "toc_name": "What is application provisioning?",
+    "href": "user-provisioning.md",
+    "content_type": "None"
+}, {
+    "node_id": "5fdb9ada-3637-490e-aea9-6c19cd67b52a",
+    "node_type": "content-node",
+    "toc_name": "What is HR-driven provisioning?",
+    "href": "what-is-hr-driven-provisioning.md",
+    "content_type": "None"
+}, {
+    "node_id": "50c14b52-3946-4f7a-b622-4729ad100fc0",
+    "node_type": "toc-node",
+    "toc_name": "Tutorials"
+}, {
+    "node_id": "c6d27cba-7d81-48f7-ba36-4cc5da3e9566",
+    "node_type": "content-node",
+    "toc_name": "App specific provisioning tutorials",
+    "href": "../saas-apps/tutorial-list.md",
+    "content_type": "None"
+}, {
+    "node_id": "ccb0cceb-f818-4cf7-be4b-84b2d41cd0ff",
+    "node_type": "toc-node",
+    "toc_name": "SCIM provisioning tutorials"
+}, {
+    "node_id": "bb2ebde7-85ce-4e04-9752-d6ebfb1cbd31",
+    "node_type": "content-node",
+    "toc_name": "Plan provisioning for a SCIM endpoint",
+    "href": "use-scim-to-provision-users-and-groups.md",
+    "content_type": "None"
+}, {
+    "node_id": "1744bcae-cb89-48a8-a85b-1106c55f21e4",
+    "node_type": "content-node",
+    "toc_name": "Develop a sample SCIM endpoint",
+    "href": "use-scim-to-build-users-and-groups-endpoints.md",
+    "content_type": "None"
+}, {
+    "node_id": "d7ce31ae-91ec-4183-abfb-02de21b99569",
+    "node_type": "content-node",
+    "toc_name": "Validate a SCIM endpoint",
+    "href": "scim-validator-tutorial.md",
+    "content_type": "None"
+}, {
+    "node_id": "17c2a00b-deb3-48fb-8922-e87eaca9e3b9",
+    "node_type": "toc-node",
+    "toc_name": "On-prem app provisioning tutorials"
+}, {
+    "node_id": "35d9d990-cf04-48c1-8db3-92af722ea5b0",
+    "node_type": "content-node",
+    "toc_name": "Provisioning to On-premises SCIM-enabled apps",
+    "href": "on-premises-scim-provisioning.md",
+    "content_type": "None"
+}, {
+    "node_id": "462fcde4-157d-413a-b5ad-5e760a39b97d",
+    "node_type": "content-node",
+    "toc_name": "Provisioning to SQL based apps",
+    "href": "on-premises-sql-connector-configure.md",
+    "content_type": "None"
+}, {
+    "node_id": "7f9fa36f-4814-4c50-9a41-fbb29e1e3440",
+    "node_type": "content-node",
+    "toc_name": "Provisioning to LDAP based apps",
+    "href": "on-premises-ldap-connector-configure.md",
+    "content_type": "None"
+}, {
+    "node_id": "2f3fc839-0ee6-476e-94a1-52acb5ed509b",
+    "node_type": "content-node",
+    "toc_name": "Customize attribute mappings",
+    "href": "customize-application-attributes.md",
+    "content_type": "None"
+}, {
+    "node_id": "1a51b555-95b7-48d8-b00b-581c92f96ae4",
+    "node_type": "toc-node",
+    "toc_name": "Concepts"
+}, {
+    "node_id": "5815e715-b8f5-4e45-887c-a57fec83ae40",
+    "node_type": "content-node",
+    "toc_name": "How application provisioning works",
+    "href": "how-provisioning-works.md",
+    "content_type": "None"
+}, {
+    "node_id": "bc890cb2-f158-4b88-99ae-8dac9340a96a",
+    "node_type": "content-node",
+    "toc_name": "Plan an application provisioning deployment",
+    "href": "plan-auto-user-provisioning.md",
+    "content_type": "None"
+}, {
+    "node_id": "5d4bf59b-3a28-4ae7-91a8-bb4f32a4c283",
+    "node_type": "content-node",
+    "toc_name": "Plan a cloud HR provisioning deployment",
+    "href": "plan-cloud-hr-provision.md",
+    "content_type": "None"
+}, {
+    "node_id": "6e4f0a9c-ca9c-48ef-ac6c-68e6d61040cd",
+    "node_type": "content-node",
+    "toc_name": "Understand logging with Azure Monitor",
+    "href": "application-provisioning-log-analytics.md",
+    "content_type": "None"
+}, {
+    "node_id": "0382fbd4-90e6-4f51-b7e3-91807902c4b2",
+    "node_type": "content-node",
+    "toc_name": "On-premises application provisioning architecture",
+    "href": "on-premises-application-provisioning-architecture.md",
+    "content_type": "None"
+}, {
+    "node_id": "3afe7824-37dd-4d86-854d-d78fb52da57d",
+    "node_type": "content-node",
+    "toc_name": "Understand expression builder",
+    "href": "expression-builder.md",
+    "content_type": "None"
+}, {
+    "node_id": "9f18bc94-7cf0-4f47-ab14-e76ec399bb0a",
+    "node_type": "content-node",
+    "toc_name": "Understand SuccessFactors integration",
+    "href": "sap-successfactors-integration-reference.md",
+    "content_type": "None"
+}, {
+    "node_id": "c8322569-e248-4c64-adbc-392b15833c22",
+    "node_type": "content-node",
+    "toc_name": "Understand Workday integration",
+    "href": "workday-integration-reference.md",
+    "content_type": "None"
+}, {
+    "node_id": "e0b8b229-6a86-4190-b058-d3eee0236251",
+    "node_type": "content-node",
+    "toc_name": "Partner driven integrations",
+    "href": "partner-driven-integrations.md",
+    "content_type": "None"
+}, {
+    "node_id": "17ee8d75-a6c7-4afe-8fbd-f9ed2f99eb29",
+    "node_type": "toc-node",
+    "toc_name": "How-to guides"
+}, {
+    "node_id": "714b0aa3-22ac-49bf-92fa-ee6f4671d713",
+    "node_type": "content-node",
+    "toc_name": "Configure provisioning for a gallery app",
+    "href": "configure-automatic-user-provisioning-portal.md",
+    "content_type": "None"
+}, {
+    "node_id": "9eb9e8a4-431a-4d10-b145-c962e9031d13",
+    "node_type": "toc-node",
+    "toc_name": "Include or exclude users and groups from scope"
+}, {
+    "node_id": "36797b07-3ea5-4894-a7c4-5304a0736ae1",
+    "node_type": "content-node",
+    "toc_name": "Scoping users or groups to be provisioned",
+    "href": "define-conditional-rules-for-provisioning-user-accounts.md",
+    "content_type": "None"
+}, {
+    "node_id": "e35967cb-bf42-485f-ab21-58f595aa231e",
+    "node_type": "content-node",
+    "toc_name": "Skip deletion for out-of-scope users",
+    "href": "skip-out-of-scope-deletions.md",
+    "content_type": "None"
+}, {
+    "node_id": "ab1a2325-0f88-4e7d-b084-ebdc1fa1a202",
+    "node_type": "content-node",
+    "toc_name": "Provision on-demand",
+    "href": "provision-on-demand.md",
+    "content_type": "None"
+}, {
+    "node_id": "16871ee2-7214-4f92-ac14-1882969a61ff",
+    "node_type": "toc-node",
+    "toc_name": "Monitor and report on provisioning"
+}, {
+    "node_id": "68035992-98d7-4d30-bb56-718ba00790b5",
+    "node_type": "content-node",
+    "toc_name": "Monitor provisioning status and performance",
+    "href": "application-provisioning-when-will-provisioning-finish-specific-user.md",
+    "content_type": "None"
+}, {
+    "node_id": "b0ec0b63-e6bb-4b3c-8b18-76491980ec3a",
+    "node_type": "content-node",
+    "toc_name": "Report on app provisioning",
+    "href": "check-status-user-account-provisioning.md",
+    "content_type": "None"
+}, {
+    "node_id": "4281fe68-86a4-404c-a621-5e9aad0bd4f2",
+    "node_type": "content-node",
+    "toc_name": "Export and import your configuration",
+    "href": "export-import-provisioning-configuration.md",
+    "content_type": "None"
+}, {
+    "node_id": "d6c9d869-a407-4920-929f-476c32b7dc57",
+    "node_type": "content-node",
+    "toc_name": "Provisioning reports",
+    "href": "../reports-monitoring/concept-provisioning-logs.md?context=%2fazure%2factive-directory%2fapp-provisioning%2fcontext%2fapp-provisioning-context",
+    "content_type": "None"
+}, {
+    "node_id": "aa1d169d-029f-4763-b118-777ccb51fcf4",
+    "node_type": "toc-node",
+    "toc_name": "Workday provisioning scenarios"
+}, {
+    "node_id": "98e1afab-55ad-424b-8dc5-adf77266b583",
+    "node_type": "content-node",
+    "toc_name": "Retrieve pronoun information",
+    "href": "workday-retrieve-pronoun-information.md",
+    "content_type": "None"
+}, {
+    "node_id": "166f6956-7de7-4b99-b759-631aefa3da42",
+    "node_type": "toc-node",
+    "toc_name": "Troubleshoot application provisioning"
+}, {
+    "node_id": "dc5d63e0-584d-45cb-863c-a06e1866ef15",
+    "node_type": "content-node",
+    "toc_name": "Known issues",
+    "href": "known-issues.md",
+    "content_type": "None"
+}, {
+    "node_id": "12ad8290-207b-43b9-a329-989ca7eb9c62",
+    "node_type": "content-node",
+    "toc_name": "Troubleshoot configuration problems",
+    "href": "application-provisioning-config-problem.md",
+    "content_type": "None"
+}, {
+    "node_id": "c6fa4c7b-0daa-4930-b7fb-65c8f48e5cd6",
+    "node_type": "content-node",
+    "toc_name": "Quarantine status",
+    "href": "application-provisioning-quarantine-status.md",
+    "content_type": "None"
+}, {
+    "node_id": "6ec98144-75bb-4799-9495-bb99e71e0158",
+    "node_type": "content-node",
+    "toc_name": "Users aren"t provisioned",
+    "href": "application-provisioning-config-problem-no-users-provisioned.md",
+    "content_type": "None"
+}, {
+    "node_id": "185fccbf-4417-401e-85a5-f3a9dd570331",
+    "node_type": "content-node",
+    "toc_name": "Missing source attribute",
+    "href": "user-provisioning-sync-attributes-for-mapping.md",
+    "content_type": "None"
+}, {
+    "node_id": "d8125126-849d-4366-aa62-f70324a51b00",
+    "node_type": "content-node",
+    "toc_name": "Troubleshooting on-premises provisioning",
+    "href": "on-premises-ecma-troubleshoot.md",
+    "content_type": "None"
+}, {
+    "node_id": "cd9d58a9-0ba1-49f2-8f6e-e5401e7b062f",
+    "node_type": "content-node",
+    "toc_name": "Provisioning logs",
+    "href": "../reports-monitoring/concept-provisioning-logs.md?context=%2fazure%2factive-directory%2fapp-provisioning%2fcontext%2fapp-provisioning-context",
+    "content_type": "None"
+}, {
+    "node_id": "245ce8bd-c778-412c-9c68-0d9cee48b61c",
+    "node_type": "toc-node",
+    "toc_name": "Troubleshoot HR provisioning"
+}, {
+    "node_id": "678b5321-5323-4439-a193-57731c271f59",
+    "node_type": "content-node",
+    "toc_name": "Attribute retrieval issues",
+    "href": "hr-attribute-retrieval-issues.md",
+    "content_type": "None"
+}, {
+    "node_id": "34a402ce-ac94-4706-990e-919f5573034b",
+    "node_type": "content-node",
+    "toc_name": "User creation issues",
+    "href": "hr-user-creation-issues.md",
+    "content_type": "None"
+}, {
+    "node_id": "7b6c4b5d-9e28-46ff-b637-76e70b4ca8bf",
+    "node_type": "content-node",
+    "toc_name": "User update issues",
+    "href": "hr-user-update-issues.md",
+    "content_type": "None"
+}, {
+    "node_id": "74a8ce98-71bc-4750-938e-fd8d5f12ae77",
+    "node_type": "content-node",
+    "toc_name": "Manager update issues",
+    "href": "hr-manager-update-issues.md",
+    "content_type": "None"
+}, {
+    "node_id": "51615355-5bce-41fb-ab03-eef18d69228c",
+    "node_type": "content-node",
+    "toc_name": "HR writeback issues",
+    "href": "hr-writeback-issues.md",
+    "content_type": "None"
+}, {
+    "node_id": "0be49387-237d-4b40-8274-fd9a0dfcda6d",
+    "node_type": "content-node",
+    "toc_name": "Enable accidental deletions prevention",
+    "href": "accidental-deletions.md",
+    "content_type": "None"
+}, {
+    "node_id": "417b1110-db77-43d4-9e2c-bba8fa1f0da6",
+    "node_type": "content-node",
+    "toc_name": "Automate configuration using MS Graph",
+    "href": "application-provisioning-configuration-api.md",
+    "content_type": "None"
+}, {
+    "node_id": "3d65b7ad-aa9f-4c8e-949c-70f3186b4218",
+    "node_type": "toc-node",
+    "toc_name": "Reference"
+}, {
+    "node_id": "22fadd4c-edd2-4ff6-ae14-ad12a6a74d74",
+    "node_type": "content-node",
+    "toc_name": "Function reference for writing expressions for attribute mappings",
+    "href": "functions-for-customizing-application-data.md",
+    "content_type": "None"
+}, {
+    "node_id": "b8c783b7-cde3-4bde-8def-242d7fe61647",
+    "node_type": "content-node",
+    "toc_name": "SCIM 2.0 protocol compliance",
+    "href": "application-provisioning-config-problem-scim-compatibility.md",
+    "content_type": "None"
+}, {
+    "node_id": "7a192519-da4a-4150-87d9-4f3882d69786",
+    "node_type": "content-node",
+    "toc_name": "SCIM and Graph scenarios",
+    "href": "scim-graph-scenarios.md",
+    "content_type": "None"
+}, {
+    "node_id": "94761b16-9174-4ae6-acd7-bfd8893601a9",
+    "node_type": "toc-node",
+    "toc_name": "Cloud HR provisioning"
+}, {
+    "node_id": "8ca8d330-ca21-43a0-a0f0-ca2fb68fda53",
+    "node_type": "content-node",
+    "toc_name": "SuccessFactors attribute reference",
+    "href": "sap-successfactors-attribute-reference.md",
+    "content_type": "None"
+}, {
+    "node_id": "35bb6764-6587-45a3-844e-86c34d7ddb50",
+    "node_type": "content-node",
+    "toc_name": "Workday attribute reference",
+    "href": "workday-attribute-reference.md",
+    "content_type": "None"
+}, {
+    "node_id": "366669ff-2275-4c33-ad84-699d1548ac23",
+    "node_type": "content-node",
+    "toc_name": "Provisioning Agent version history",
+    "href": "provisioning-agent-release-version-history.md",
+    "content_type": "None"
+}, {
+    "node_id": "379ba365-72ac-4267-ab0a-741c9918f3e9",
+    "node_type": "content-node",
+    "toc_name": "Migrate connector from MIM Sync",
+    "href": "on-premises-migrate-microsoft-identity-manager.md",
+    "content_type": "None"
+}, {
+    "node_id": "256f38e0-cec2-4fd1-98be-fa00f403ae23",
+    "node_type": "toc-node",
+    "toc_name": "Resources"
+}, {
+    "node_id": "ace4264e-1f6b-4018-9136-fd61d275827e",
+    "node_type": "content-node",
+    "toc_name": "Support and help options for developers",
+    "href": "../develop/developer-support-help-options.md",
+    "content_type": "None"
+}, {
+    "node_id": "c0f45ebd-70af-437a-a5c9-614ab936aaef",
+    "node_type": "content-node",
+    "toc_name": "Azure feedback forum",
+    "href": "https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789"
+}, {
+    "node_id": "ed9227d5-a142-464c-aefc-fe0cb52b06b2",
+    "node_type": "content-node",
+    "toc_name": "Microsoft Q&A question page",
+    "href": "/answers/topics/azure-active-directory.html"
+}, {
+    "node_id": "d8a316bf-b1a3-4c34-b9be-b8d832d307c1",
+    "node_type": "content-node",
+    "toc_name": "Pricing",
+    "href": "https://azure.microsoft.com/pricing/details/active-directory/"
+}, {
+    "node_id": "03c39a0f-da65-443a-bbdf-0ba9b8620272",
+    "node_type": "content-node",
+    "toc_name": "Service updates",
+    "href": "https://azure.microsoft.com/updates/?product=active-directory"
+}, {
+    "node_id": "36cf9c02-3005-4428-8b62-0b0e8c8d2982",
+    "node_type": "content-node",
+    "toc_name": "Stack Overflow",
+    "href": "https://stackoverflow.com/questions/tagged/azure-active-directory"
+}, {
+    "node_id": "ce5c3236-f29f-4208-bc6a-fbed95fc7682",
+    "node_type": "content-node",
+    "toc_name": "Videos",
+    "href": "https://azure.microsoft.com/documentation/videos/index/?services=active-directory"
+}]

@@ -1,7 +1,7 @@
 '''This scripts work and unpacks a table of contents as a flat list.
 It specifies the filename and document type (ms.topic)
 
-2022.10.31 Matt Briggs
+2022.11.12 Matt Briggs
 '''
 
 
@@ -18,8 +18,9 @@ def main():
     try: 
         tocfile = sys.argv[1]
     except IndexError as e:
-        print("Error: {}\nNeed a toc file.".format(e))
-        exit()
+        tocfile = r"C:\git\ms\azure-docs-pr\articles\active-directory\app-provisioning\toc.yml"
+        # print("Error: {}\nNeed a toc file.".format(e))
+        # exit()
 
     with open (tocfile, "r") as stream:
         tocdict = yaml.load(stream, Loader=yaml.CLoader)
@@ -28,6 +29,12 @@ def main():
 
     spot = tocfile.lower().find("toc.yml")
     stem = tocfile[0:spot]
+
+
+# dict is a node.
+# need to store a node
+# string are the values in the node.
+
 
     def process_toc(intoc):
         if type(intoc) == str:
