@@ -31,11 +31,11 @@ def make_table(in_array):
     headers = in_array[0].keys()
     out_table.append(list(headers))
     for index, i in enumerate(in_array):
-        if index > 0:
-            row = []
-            for j in headers:
-                row.append(i[j])
-            out_table.append(row)
+        # if index > 0:
+        row = []
+        for j in headers:
+            row.append(i[j])
+        out_table.append(row)
     return(out_table)
 
 def main():
@@ -56,12 +56,22 @@ def main():
     stem = tocfile[0:spot]
 
     # iterator to build a graph from the yaml TOC
+    rootnode = {}
+    rootnode["node_id"] = "root"
+    rootnode["node_type"] = "toc-node"
+    rootnode["toc_name"] = "root"
+    rootnode["content_type"] = "None"
+    rootnode["href"] = "None"
+
     nodes = []
+    nodes.append(rootnode)
     rels = []
+
     def process_toc(intoc, parent_node):
+        print("{}".format(parent_node))
         if type(intoc) == str:
             pass
-        if type(intoc) == list:
+        elif type(intoc) == list:
             for i in intoc:
                 process_toc(i, parent_node)
         elif type(intoc) == dict:
@@ -74,8 +84,11 @@ def main():
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "toc-node"
                         node["toc_name"] = intoc["name"]
+                        node["content_type"] = "None"
+                        node["href"] = "None"
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
+                        print(edge)
                         rels.append(edge)
                         nodes.append(node)
                         parent_node = node["node_id"]
@@ -85,8 +98,11 @@ def main():
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "content-node"
                         node["toc_name"] = "no name"
+                        node["content_type"] = "None"
+                        node["href"] = ""
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
+                        print(edge)
                         rels.append(edge)
                         nodes.append(node)
                         parent_node = node["node_id"]
@@ -97,16 +113,19 @@ def main():
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "content-node"
                         node["toc_name"] = intoc["name"]
+                        node["content_type"] = "None"
+                        node["href"] = ""
                         node["href"] = intoc["href"]
                         if intoc["href"].find(".md") > 0:
                             try:
                                 handler = MDH.MDHandler()
-                                md_page = handler.get_page(stem + str(intoc))
+                                md_page = handler.get_page(stem + str(intoc["href"]))
                                 node["content_type"] = md_page.metadata["ms.topic"]
                             except:
-                                node["content_type"] = "None"
+                                pass
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
+                        print(edge)
                         rels.append(edge)
                         nodes.append(node)
             except Exception as e:
