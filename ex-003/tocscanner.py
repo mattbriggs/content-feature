@@ -11,6 +11,8 @@ import mdbutilities.mdbutilities as MU
 import markdownvalidator.mdhandler as MDH
 
 
+#utility functions
+
 def make_set(in_iter):
     '''With an iterable, convert to a set'''
     try:
@@ -20,24 +22,17 @@ def make_set(in_iter):
         return print(e)
         exit()
 
+def escape_text(instring):
+    '''Escape characters that throw issues in Cypher.'''
+    out = instring.replace("'", "\'")
+    return out
 
-def make_table(in_array):
-    '''Take an array of dictionaries and a make a table of tables'''
-    out_table = []
-    # header
-    headers = in_array[0].keys()
-    out_table.append(list(headers))
-    for index, i in enumerate(in_array):
-        # if index > 0:
-        row = []
-        for j in headers:
-            row.append(i[j])
-        out_table.append(row)
-    return(out_table)
 
+#TOC scanner function
 
 def input_tocfile(intocyaml):
-    '''With a toc yaml file return a touple of lists that contain node dicts and edge dicts'''
+    '''With a toc yaml file return a touple of lists that contain node dicts 
+    and edge dicts'''
     with open (intocyaml, "r") as stream:
         tocdict = yaml.load(stream, Loader=yaml.CLoader)
 
@@ -48,7 +43,7 @@ def input_tocfile(intocyaml):
     rootID = str(uuid.uuid4())
     rnode = {}
     rnode["node_id"] = rootID
-    rnode["node_type"] = "root"
+    rnode["node_type"] = "content"
     rnode["name"] = "root"
     rnode["content_type"] = "None"
     rnode["href"] = "None"
@@ -58,6 +53,9 @@ def input_tocfile(intocyaml):
     rels = []
 
     def process_toc(intoc, parent_node):
+        '''This is a recursive function that walks the a yaml file and builds 
+        a graph object as a tuple of edges and nodes. Each tuple is an array
+        of dictionaries specifying the node and the edge.'''
         if type(intoc) == str:
             pass
         elif type(intoc) == list:
@@ -72,7 +70,7 @@ def input_tocfile(intocyaml):
                         edge = {}
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "toc"
-                        node["name"] = intoc["name"]
+                        node["name"] = escape_text(intoc["name"])
                         node["content_type"] = "None"
                         node["href"] = "None"
                         edge["type"] = "child"
@@ -101,7 +99,7 @@ def input_tocfile(intocyaml):
                         edge = {}
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "content"
-                        node["name"] = intoc["name"]
+                        node["name"] = escape_text(intoc["name"])
                         node["content_type"] = "None"
                         node["href"] = ""
                         node["href"] = intoc["href"]

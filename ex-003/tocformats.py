@@ -19,26 +19,29 @@ def make_attribute(indict):
     keys = indict.keys()
     meat = ""
     for i in keys:
-        meat += "{} : '{}'".format(i, indict[i])
-    return "{{ {} }}".format(meat)
+        meat += "{} : '{}', ".format(i, indict[i])
+    return "{{ {} }}".format(meat[:-2])
 
 
 # cypher
-def create_cypher_text(ingraph):
+def create_cypher_graph(ingraph):
     '''With the path and file to a target directory and a mapper graph, create cypher files.'''
     nodes = create_cypher_nodes(ingraph)
     edges = create_cypher_edges(ingraph)
     output = nodes + edges
     return output
 
+NODECOUNT = 1
 
 def create_cypher_nodes(ingraph):
     '''Create a node:
     CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})'''
+    global NODECOUNT
     output = ""
-    for i in ingraph[0]:
+    for serial, i in enumerate(ingraph[0]):
+        NODECOUNT += serial
         try:
-            create_node = "CREATE (a:content {})".format(make_attribute(i))
+            create_node = "CREATE (n{}:content {});\n".format(NODECOUNT, make_attribute(i))
             output += create_node
         except Exception as e:
             print("{} Error: {}".format(str(i), e))
@@ -51,7 +54,7 @@ def create_cypher_edges(ingraph):
     output = ""
     for i in ingraph[1]:
         try: 
-            create_edge = "CREATE (a:content {node_id: {}) -[r:{}] (b:content {node_id {})".format(i["source"], i["type"], i["target"]) 
+            create_edge = "MATCH (a:content), (b:content)\nWHERE a.node_id = '{}' AND b.node_id ='{}'\nCREATE (a)-[r:child]->(b);\n\n".format(i["source"], i["target"]) 
             output += create_edge
         except Exception as e:
             print("{} Error: {}".format(str(i), e))
@@ -132,3 +135,38 @@ def create_dot_edges(ingraph):
     for i in ingraph:
         output += str(i[1])
     return output
+
+
+#CSV files
+def make_table(in_array):
+    '''Take an array of dictionaries and a make a table of tables'''
+    out_table = []
+    # header
+    headers = in_array[0].keys()
+    out_table.append(list(headers))
+    for index, i in enumerate(in_array):
+        # if index > 0:
+        row = []
+        for j in headers:
+            row.append(i[j])
+        out_table.append(row)
+    return(out_table)
+
+
+def create_csv(nodes, nodefile, edge, edgefile):
+    '''With the the tuple of node/edges from tocgrapher produce:
+    - graph[0] (nodes) and path to a node file
+    - graph[1[ (edges) and a path a edge file
+    '''
+
+    csv_nodes = make_table(nodes)
+    csv_edges = make_table(edge)
+    MU.write_csv(csv_nodes, nodefile)
+    MU.write_csv(csv_edges, edgefile)
+
+
+def main():
+    print("This is a module of functions for the toc mapper.")
+
+if __name__ == "__main__":
+    main()
