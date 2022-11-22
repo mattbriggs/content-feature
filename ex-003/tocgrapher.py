@@ -7,6 +7,7 @@ Workflow for module for graphing TOCs.
 import yaml
 import datetime
 import time
+from neo4j import GraphDatabase
 import mdbutilities.mdbutilities as MU
 
 import tocharvestor as TH
@@ -23,6 +24,24 @@ def create_csv_check(folder, graph, count):
     edgefile = folder + "{}-{}-edges.csv".format(todaysDate, count)
     TF.create_csv(nodes, nodefile, edges, edgefile)
 
+class GraphDB:
+
+    def __init__(self, uri, user, password):
+        self.driver = GraphDatabase.driver(uri, auth=(user, password))
+
+    def close(self):
+        self.driver.close()
+
+    def create_element(self, query):
+        with self.driver.session() as session:
+            result = session.execute_write(self._create_and_return_greeting, query)
+            print(result)
+
+    @staticmethod
+    def _create_and_return_greeting(tx, query):
+        result = tx.run(query)
+        return result
+
 def main():
 
     with open (r"C:\git\feature\content-feature\ex-003\jobtoc.yml", "r") as stream:
@@ -35,11 +54,19 @@ def main():
         for count, t, in enumerate(tocs):
             print("{} of {} getting {}".format(size-count, size, t))
             graphed = TS.input_tocfile(t)
-            output += TF.create_cypher_graph(graphed)
-            create_csv_check("C:\\data\\tocgraphs\\", graphed, count)
-
-    MU.write_text(output, config["output"])
-
+            if config["type"].lower() == "neo4j":
+                try:
+                    create_csv_check("C:\\data\\tocgraphs\\", graphed, count)
+                except Exception as e:
+                    print("    Error CSV for {} : {}".format(t, e))
+            elif config["type"].lower() == "csv":
+                try:
+                    cypher = TF.create_cypher_graph(graphed)
+                    add_element = GraphDB("bolt://localhost:7687", "neo4j", "reb00REB")
+                    add_element.create_element(cypher)
+                    add_element.close()
+                except Exception as e:
+                    print("    Error neo4j for {} : {} Query: {}".format(t, e, cypher))
 
 if __name__ == "__main__":
     main()

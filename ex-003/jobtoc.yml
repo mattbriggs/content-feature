@@ -1,3 +1,4 @@
-output: "C:\\git\\feature\\content-feature\\ex-003\\cyphergraphs\\tocs.cypher"
+output: "C:\\git\\feature\\content-feature\\ex-003\\cyphergraphs\\"
+type: "neo4j" # [csv, neo4j]
 folders:
   - folder: "C:\\git\\ms\\azure-docs-pr\\articles\\"
