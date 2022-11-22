@@ -12,7 +12,9 @@ Each function produces the target output. Currently supporting:
 
 '''
 
+from neo4j import GraphDatabase
 import mdbutilities.mdbutilities as MU
+import logging
 
 
 def make_attribute(indict):
@@ -21,6 +23,28 @@ def make_attribute(indict):
     for i in keys:
         meat += "{} : '{}', ".format(i, indict[i])
     return "{{ {} }}".format(meat[:-2])
+
+class Neo4jDB:
+
+    def __init__(self, uri, user, password):
+        self.driver = GraphDatabase.driver(uri, auth=(user, password))
+
+    def close(self):
+        self.driver.close()
+
+    def create_element(self, cquery):
+        with self.driver.session() as session:
+            result = session.execute_write(self._create_and_return_greeting, cquery)
+
+    @staticmethod
+    def _create_and_return_greeting(tx, message):
+        result = tx.run(message)
+        return result.single()[0]
+
+def run_cypher(cypher):
+    add_element = Neo4jDB("bolt://localhost:7687", "neo4j", "reb00REB")
+    add_element.create_element(cypher)
+    add_element.close()
 
 
 # cypher
@@ -41,10 +65,12 @@ def create_cypher_nodes(ingraph):
     for serial, i in enumerate(ingraph[0]):
         NODECOUNT += serial
         try:
-            create_node = "CREATE (n{}:content {});\n".format(NODECOUNT, make_attribute(i))
+            create_node = "CREATE (n{}:content {})\nReturn (n{});".\
+                format(NODECOUNT, make_attribute(i), NODECOUNT)
+            run_cypher(create_node)
             output += create_node
         except Exception as e:
-            print("{} Error: {}".format(str(i), e))
+            logging.error("tocformats.py - Error: {}".format(e))
     return output
 
 
@@ -54,10 +80,12 @@ def create_cypher_edges(ingraph):
     output = ""
     for i in ingraph[1]:
         try: 
-            create_edge = "MATCH (a:content), (b:content)\nWHERE a.node_id = '{}' AND b.node_id ='{}'\nCREATE (a)-[r:child]->(b);\n\n".format(i["source"], i["target"]) 
+            create_edge = "MATCH (a:content), (b:content) WHERE a.node_id = '{}' AND b.node_id ='{}'\n\
+            CREATE (a)-[r:child]->(b)\nReturn (a), (b);".format(i["source"], i["target"]) 
             output += create_edge
+            run_cypher(create_edge)
         except Exception as e:
-            print("{} Error: {}".format(str(i), e))
+            logging.error("tocformats.py - {}".format(e))
     return output
 
 # gremlin

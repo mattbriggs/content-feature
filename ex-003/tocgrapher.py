@@ -7,7 +7,6 @@ Workflow for module for graphing TOCs.
 import yaml
 import datetime
 import time
-from neo4j import GraphDatabase
 import logging
 import mdbutilities.mdbutilities as MU
 
@@ -24,18 +23,6 @@ def create_csv_check(folder, graph, count, date):
     edgefile = folder + "{}-{}-edges.csv".format(date, count)
     TF.create_csv(nodes, nodefile, edges, edgefile)
 
-class GraphDB:
-
-    def __init__(self, uri, user, password):
-        self.driver = GraphDatabase.driver(uri, auth=(user, password))
-
-    def close(self):
-        self.driver.close()
-
-    def create_element(self, cquery):
-        with self.driver.session() as session:
-            result = session.execute_write(self._create_and_return_greeting, cquery)
-            print(result)
 
 def main():
     '''Builds the graph by the specified output type from a list of github 
@@ -62,12 +49,9 @@ def main():
             if config["type"].lower() == "neo4j":
                 try:
                     cypher = TF.create_cypher_graph(graphed)
-                    logging.info("Query: {}".format(cypher))
-                    add_element = GraphDB("bolt://localhost:7687", "neo4j", "reb00REB")
-                    add_element.create_element(str(cypher))
-                    add_element.close()
+                    logging.info("\nQuery: {} \n".format(cypher))
                 except Exception as e:
-                    logging.error("Error neo4j for {} : {}".format(t, e))
+                    logging.error("Error neo4j for {} : {}\n".format(t, e))
             elif config["type"].lower() == "csv":
                 try:
                     create_csv_check(config["output"], graphed, count, todaysDate)
@@ -76,7 +60,8 @@ def main():
             else:
                 print("You need a value for the output type.")
                 exit()
-    logging.info('Finished')
+    logging.info("Finished: {}".format(time.localtime(time.time())))
+
 
 if __name__ == "__main__":
     main()
