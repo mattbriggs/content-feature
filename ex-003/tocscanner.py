@@ -106,19 +106,18 @@ def input_tocfile(intocyaml):
                         node["node_type"] = "content"
                         node["name"] = escape_text(intoc["name"])
                         node["href"] = intoc["href"]
+                        filepath = stem + str(intoc["href"])
+                        node["filepath"] = filepath
                         if intoc["href"].find(".md") > 0:
                             try:
-                                filepath = stem + str(intoc["href"])
                                 rawtext = MU.get_textfromfile(filepath)
                                 handler = MDH.MDHandler()
-                                md_page = handler.get_page()
+                                md_page = handler.get_page(filepath)
                                 node["content_type"] = md_page.metadata["ms.topic"]
-                                node["filepath"] = filepath
                                 node["keywords"] = LEX.get_top_ten(rawtext)
                                 node["summary"] = SUM.get_summary_text(rawtext)
                             except:
                                 node["content_type"] = "None"
-                                node["filepath"] = "Not-found"
                         edge["type"] = "child"
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
