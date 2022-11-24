@@ -9,6 +9,8 @@ import yaml
 import uuid
 import mdbutilities.mdbutilities as MU
 import markdownvalidator.mdhandler as MDH
+import textsummary as SUM
+import textwords as LEX
 
 
 #utility functions
@@ -47,6 +49,7 @@ def input_tocfile(intocyaml):
     rnode["name"] = "root"
     rnode["content_type"] = "None"
     rnode["href"] = "None"
+    rnode["filepath"] = stem
 
     nodes = []
     nodes.append(rnode)
@@ -73,6 +76,7 @@ def input_tocfile(intocyaml):
                         node["name"] = escape_text(intoc["name"])
                         node["content_type"] = "None"
                         node["href"] = "None"
+                        node["filepath"] = stem
                         edge["type"] = "child"
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
@@ -83,10 +87,11 @@ def input_tocfile(intocyaml):
                         node = {}
                         edge = {}
                         node["node_id"] = str(uuid.uuid4())
-                        node["node_type"] = "content"
+                        node["node_type"] = "toc"
                         node["name"] = "no name"
                         node["content_type"] = "None"
                         node["href"] = ""
+                        node["filepath"] = stem
                         edge["type"] = "child"
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
@@ -100,16 +105,20 @@ def input_tocfile(intocyaml):
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "content"
                         node["name"] = escape_text(intoc["name"])
-                        node["content_type"] = "None"
-                        node["href"] = ""
                         node["href"] = intoc["href"]
                         if intoc["href"].find(".md") > 0:
                             try:
+                                filepath = stem + str(intoc["href"])
+                                rawtext = MU.get_textfromfile(filepath)
                                 handler = MDH.MDHandler()
-                                md_page = handler.get_page(stem + str(intoc["href"]))
+                                md_page = handler.get_page()
                                 node["content_type"] = md_page.metadata["ms.topic"]
+                                node["filepath"] = filepath
+                                node["keywords"] = LEX.get_top_ten(rawtext)
+                                node["summary"] = SUM.get_summary_text(rawtext)
                             except:
-                                pass
+                                node["content_type"] = "None"
+                                node["filepath"] = "Not-found"
                         edge["type"] = "child"
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
