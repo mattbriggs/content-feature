@@ -114,8 +114,14 @@ def input_tocfile(intocyaml):
                                 handler = MDH.MDHandler()
                                 md_page = handler.get_page(filepath)
                                 node["content_type"] = md_page.metadata["ms.topic"]
-                                node["keywords"] = LEX.get_top_ten(rawtext)
-                                node["summary"] = SUM.get_summary_text(rawtext)
+                                try:
+                                    node["keywords"] = LEX.get_top_ten(rawtext)
+                                except:
+                                    node["keywords"] = "Unable to parse"
+                                try:
+                                    node["summary"] = SUM.get_summary_text(rawtext)
+                                except:
+                                    node["summary"] = "Unable to parse"
                             except:
                                 node["content_type"] = "None"
                         edge["type"] = "child"
