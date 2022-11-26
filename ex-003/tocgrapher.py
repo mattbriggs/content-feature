@@ -49,7 +49,7 @@ def main():
             if config["type"].lower() == "neo4j":
                 try:
                     cypher = TF.create_cypher_graph(graphed)
-                    logging.info("\nQuery: {} \n".format(cypher))
+                    logging.info("\Success neo4j: {} \n".format(cypher))
                 except Exception as e:
                     logging.error("Error neo4j for {} : {}\n".format(t, e))
             elif config["type"].lower() == "csv":
