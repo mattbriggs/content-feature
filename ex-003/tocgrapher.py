@@ -8,19 +8,19 @@ import yaml
 import datetime
 import time
 import logging
-import mdbutilities.mdbutilities as MU
 
 import tocharvestor as TH
 import tocscanner as TS
 import tocformats as TF
+import mdbutilities.mdbutilities as MU
 
 
-def create_csv_check(folder, graph, count, date):
+def create_csv_check(folder, graph, count, indate):
     '''With a graph tuple and count create graph outputs.'''
-    nodes = graph[0]
-    edges = graph[1]
-    nodefile = folder + "{}-{}-nodes.csv".format(date, count)
-    edgefile = folder + "{}-{}-edges.csv".format(date, count)
+    nodes = TF.make_table(graph[0])
+    edges = TF.make_table(graph[1])
+    nodefile = folder + "{}-{}-nodes.csv".format(indate, count)
+    edgefile = folder + "{}-{}-edges.csv".format(indate, count)
     TF.create_csv(nodes, nodefile, edges, edgefile)
 
 
@@ -43,23 +43,29 @@ def main():
     for i in config["folders"]:
         tocs = TH.get_tocs_from_repo(i["folder"])
         size = len(tocs)
+        if config["limit"] == "0":
+            limit = size
+        else:
+            limit = config["limit"]
         for count, t, in enumerate(tocs):
-            print("{} of {} getting {}".format(size-count, size, t))
-            graphed = TS.input_tocfile(t)
-            if config["type"].lower() == "neo4j":
-                try:
-                    cypher = TF.create_cypher_graph(graphed)
-                    logging.info("\Success neo4j: {} \n".format(cypher))
-                except Exception as e:
-                    logging.error("Error neo4j for {} : {}\n".format(t, e))
-            elif config["type"].lower() == "csv":
-                try:
-                    create_csv_check(config["output"], graphed, count, todaysDate)
-                except Exception as e:
-                    logging.error("Error csv for {} : {} Query: {}".format(t, e, cypher))
-            else:
-                print("You need a value for the output type.")
-                exit()
+            if count < limit:
+                print("{} of {} getting {}".format(size-count, size, t))
+                graphed = TS.input_tocfile(t)
+                if config["type"].lower() == "neo4j":
+                    try:
+                        output = TF.create_cypher_graph(graphed)
+                        filename = config["output"] + "{}-graph-{}.cypher".format(todaysDate, count)
+                        MU.write_text(output, filename)
+                    except Exception as e:
+                        logging.error("Error neo4j for {} : {}\n".format(t, e))
+                elif config["type"].lower() == "csv":
+                    try:
+                        create_csv_check(config["output"], graphed, count, todaysDate)
+                    except Exception as e:
+                        logging.error("Error csv for {} : {} : {}".format(t, e, graphed))
+                else:
+                    print("You need a value for the output type.")
+                    exit()
     logging.info("Finished: {}".format(time.localtime(time.time())))
 
 

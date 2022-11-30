@@ -7,7 +7,6 @@ contains two arrays. [0] is an array of nodes. [1] is an array of edges.
 from re import X
 import yaml
 import uuid
-import html as HTML
 import logging
 import mdbutilities.mdbutilities as MU
 import markdownvalidator.mdhandler as MDH
@@ -49,7 +48,7 @@ def input_tocfile(intocyaml):
     rnode["node_id"] = rootID
     rnode["node_type"] = "content"
     rnode["name"] = "root"
-    rnode["content_type"] = "root"
+    rnode["content_type"] = "None"
     rnode["href"] = "None"
     rnode["filepath"] = stem
 
@@ -75,7 +74,7 @@ def input_tocfile(intocyaml):
                         edge = {}
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "toc"
-                        node["name"] = HTML.escape(intoc["name"], quote="True")
+                        node["name"] = escape_text(intoc["name"])
                         node["content_type"] = "None"
                         node["href"] = "None"
                         node["filepath"] = stem
@@ -92,7 +91,7 @@ def input_tocfile(intocyaml):
                         node["node_type"] = "toc"
                         node["name"] = "no name"
                         node["content_type"] = "None"
-                        node["href"] = "None"
+                        node["href"] = ""
                         node["filepath"] = stem
                         edge["type"] = "child"
                         edge["source"] = parent_node
@@ -107,6 +106,7 @@ def input_tocfile(intocyaml):
                         node["node_id"] = str(uuid.uuid4())
                         node["node_type"] = "content"
                         node["name"] = escape_text(intoc["name"])
+                        node["content_type"] = "None"
                         node["href"] = intoc["href"]
                         filepath = stem + str(intoc["href"])
                         node["filepath"] = filepath
@@ -115,11 +115,17 @@ def input_tocfile(intocyaml):
                                 handler = MDH.MDHandler()
                                 md_page = handler.get_page(filepath)
                                 node["content_type"] = md_page.metadata["ms.topic"]
+                                rawtext = MU.get_textfromfile(filepath)
+                                try:
+                                    node["keywords"] = LEX.get_top_ten(rawtext)
+                                except:
+                                    node["keywords"] = "Unable to parse"
+                                try:
+                                    node["summary"] = SUM.get_summary_text(rawtext)
+                                except:
+                                    node["summary"] = "Unable to parse"
                             except Exception as e:
-                                logging.error("Error creating topic type for {} : error: {}".format(filepath, e))
-                                node["content_type"] = "None"
-                        else:
-                            node["content_type"] = "None"
+                                logging.error("Error creating abstract for {} : error: {}".format(filepath, e))
                         edge["type"] = "child"
                         edge["source"] = parent_node
                         edge["target"] = node["node_id"]
@@ -127,7 +133,7 @@ def input_tocfile(intocyaml):
                         nodes.append(node)
             except Exception as e:
                 print("Error: {}".format(e))
-    process_toc(tocdict, rnode["node_id"])
+    process_toc(tocdict, rootID)
 
     return (nodes, rels)
 

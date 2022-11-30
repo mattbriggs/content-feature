@@ -50,19 +50,19 @@ def run_cypher(cypher):
 # cypher
 def create_cypher_graph(ingraph):
     '''With the path and file to a target directory and a mapper graph, create cypher files.'''
-    nodes = create_cypher_nodes(ingraph)
-    edges = create_cypher_edges(ingraph)
+    nodes = create_cypher_nodes(ingraph[0])
+    edges = create_cypher_edges(ingraph[1])
     output = nodes + edges
     return output
 
 NODECOUNT = 1
 
-def create_cypher_nodes(ingraph):
+def create_cypher_nodes(nodes):
     '''Create a node:
     CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})'''
     global NODECOUNT
     output = ""
-    for serial, i in enumerate(ingraph[0]):
+    for serial, i in enumerate(nodes):
         NODECOUNT += serial
         try:
             create_node = "CREATE (n{}:content {})\nReturn (n{});".\
@@ -70,22 +70,22 @@ def create_cypher_nodes(ingraph):
             run_cypher(create_node)
             output += create_node
         except Exception as e:
-            logging.error("tocformats.py - Error: {}".format(e))
+            logging.error("Error Creating a node: {}".format(e))
     return output
 
 
-def create_cypher_edges(ingraph):
+def create_cypher_edges(edges):
     '''Create an edge:
     (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix)'''
     output = ""
-    for i in ingraph[1]:
+    for i in edges:
         try: 
             create_edge = "MATCH (a:content), (b:content) WHERE a.node_id = '{}' AND b.node_id ='{}'\n\
             CREATE (a)-[r:child]->(b)\nReturn (a), (b);".format(i["source"], i["target"]) 
             output += create_edge
             run_cypher(create_edge)
         except Exception as e:
-            logging.error("tocformats.py - {}".format(e))
+            logging.error("Error creating an edge {}".format(e))
     return output
 
 # gremlin
@@ -173,11 +173,11 @@ def make_table(in_array):
     headers = in_array[0].keys()
     out_table.append(list(headers))
     for index, i in enumerate(in_array):
-        # if index > 0:
-        row = []
-        for j in headers:
-            row.append(i[j])
-        out_table.append(row)
+        if index > 0:
+            row = []
+            for j in headers:
+                row.append(i[j])
+            out_table.append(row)
     return(out_table)
 
 
