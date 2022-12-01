@@ -13,8 +13,12 @@ Each function produces the target output. Currently supporting:
 '''
 
 from neo4j import GraphDatabase
-import mdbutilities.mdbutilities as MU
 import logging
+
+import mdbutilities.mdbutilities as MU
+import textsummary as SUM
+import textwords as LEX
+
 
 
 def make_attribute(indict):
@@ -166,31 +170,30 @@ def create_dot_edges(ingraph):
 
 
 #CSV files
+def create_csv_check(folder, graph, count, indate):
+    '''With a graph tuple and count create graph outputs.'''
+    nodes = make_table(graph[0])
+    edges = make_table(graph[1])
+    nodefile = folder + "{}-{}-nodes.csv".format(indate, count)
+    edgefile = folder + "{}-{}-edges.csv".format(indate, count)
+    MU.write_csv(nodes, nodefile)
+    MU.write_csv(edges, edgefile)
+
+
 def make_table(in_array):
-    '''Take an array of dictionaries and a make a table of tables'''
+    '''Take an array of dictionaries and make a table of tables'''
     out_table = []
     # header
     headers = in_array[0].keys()
+    print(headers)
     out_table.append(list(headers))
-    for index, i in enumerate(in_array):
-        if index > 0:
-            row = []
-            for j in headers:
-                row.append(i[j])
-            out_table.append(row)
+    for i in in_array:
+        row = []
+        for j in headers:
+            row.append(i[j])
+        out_table.append(row)
+    print(out_table)
     return(out_table)
-
-
-def create_csv(nodes, nodefile, edge, edgefile):
-    '''With the the tuple of node/edges from tocgrapher produce:
-    - graph[0] (nodes) and path to a node file
-    - graph[1[ (edges) and a path a edge file
-    '''
-
-    csv_nodes = make_table(nodes)
-    csv_edges = make_table(edge)
-    MU.write_csv(csv_nodes, nodefile)
-    MU.write_csv(csv_edges, edgefile)
 
 
 def main():

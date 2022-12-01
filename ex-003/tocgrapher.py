@@ -15,13 +15,7 @@ import tocformats as TF
 import mdbutilities.mdbutilities as MU
 
 
-def create_csv_check(folder, graph, count, indate):
-    '''With a graph tuple and count create graph outputs.'''
-    nodes = TF.make_table(graph[0])
-    edges = TF.make_table(graph[1])
-    nodefile = folder + "{}-{}-nodes.csv".format(indate, count)
-    edgefile = folder + "{}-{}-edges.csv".format(indate, count)
-    TF.create_csv(nodes, nodefile, edges, edgefile)
+
 
 
 def main():
@@ -60,7 +54,9 @@ def main():
                         logging.error("Error neo4j for {} : {}\n".format(t, e))
                 elif config["type"].lower() == "csv":
                     try:
-                        create_csv_check(config["output"], graphed, count, todaysDate)
+                        filename = config["output"] + "{}-graph-{}.txt".format(todaysDate, count)
+                        MU.write_text(str(graphed), filename)
+                        TF.create_csv_check(config["output"], graphed, count, todaysDate)
                     except Exception as e:
                         logging.error("Error csv for {} : {} : {}".format(t, e, graphed))
                 else:

@@ -28,7 +28,7 @@ def make_set(in_iter):
 
 def escape_text(instring):
     '''Escape characters that throw issues in Cypher.'''
-    out = instring.replace("'", "\'")
+    out = HTML.escape(instring, quote="True")
     return out
 
 
@@ -110,14 +110,18 @@ def input_tocfile(intocyaml):
                         node["href"] = intoc["href"]
                         filepath = stem + str(intoc["href"])
                         node["filepath"] = filepath
+                        # node["content_type"] = "None"
                         if intoc["href"].find(".md") > 0:
                             try:
                                 handler = MDH.MDHandler()
                                 md_page = handler.get_page(filepath)
                                 node["content_type"] = md_page.metadata["ms.topic"]
+                                rawtext = MU.get_textfromfile(filepath)
+                                node["keywords"] = LEX.get_top_ten(rawtext)
+                                node["summary"] = SUM.get_summary_text(rawtext)
                             except Exception as e:
                                 logging.error("Error creating topic type for {} : error: {}".format(filepath, e))
-                                node["content_type"] = "None"
+                                node["content_type"] = "Error"
                         else:
                             node["content_type"] = "None"
                         edge["type"] = "child"
