@@ -15,9 +15,6 @@ import tocformats as TF
 import mdbutilities.mdbutilities as MU
 
 
-
-
-
 def main():
     '''Builds the graph by the specified output type from a list of github 
     repositories that use the DocFX/Learn.microsoft.com content type.

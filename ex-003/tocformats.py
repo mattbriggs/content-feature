@@ -19,15 +19,16 @@ import mdbutilities.mdbutilities as MU
 import textsummary as SUM
 import textwords as LEX
 
-
+NODECOUNT = 1
 
 def make_attribute(indict):
     keys = indict.keys()
     meat = ""
     for i in keys:
         meat += "{} : '{}', ".format(i, indict[i])
-    return "{{ {} }}".format(meat[:-2])
-
+    tuna = meat.replace("\\","\\\\")
+    return "{{ {} }}".format(tuna[:-2])
+    
 class Neo4jDB:
 
     def __init__(self, uri, user, password):
@@ -53,13 +54,14 @@ def run_cypher(cypher):
 
 # cypher
 def create_cypher_graph(ingraph):
+    global NODECOUNT
+    NODECOUNT = 1
     '''With the path and file to a target directory and a mapper graph, create cypher files.'''
     nodes = create_cypher_nodes(ingraph[0])
     edges = create_cypher_edges(ingraph[1])
     output = nodes + edges
     return output
 
-NODECOUNT = 1
 
 def create_cypher_nodes(nodes):
     '''Create a node:
@@ -183,16 +185,13 @@ def create_csv_check(folder, graph, count, indate):
 def make_table(in_array):
     '''Take an array of dictionaries and make a table of tables'''
     out_table = []
-    # header
     headers = in_array[0].keys()
-    print(headers)
     out_table.append(list(headers))
     for i in in_array:
         row = []
         for j in headers:
             row.append(i[j])
         out_table.append(row)
-    print(out_table)
     return(out_table)
 
 

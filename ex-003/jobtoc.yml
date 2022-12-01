@@ -1,5 +1,5 @@
 output: "C:\\data\\tocgraphs\\"
-type: "csv"
+type: "neo4j"
 limit: 2
 folders:
   - folder: "C:\\git\\ms\\azure-docs-pr\\articles\\"
