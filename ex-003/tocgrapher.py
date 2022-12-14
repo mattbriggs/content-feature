@@ -82,12 +82,13 @@ def main():
 
     for i in config["folders"]:
         tocs = TH.get_tocs_from_repo(i["folder"])
-        if config["limit"] == "0":
-            limit = size
-        else:
-            limit = config["limit"]
+    
+    if config["limit"] == "0":
+        limit = len(tocs)
+    else:
+        limit = config["limit"]
 
-    TOCLIST = tocs[:limit]
+    TOCLIST = tocs[:int(limit)]
     l_indexes = get_split(len(TOCLIST))
     
     if len(TOCLIST) < 8:
