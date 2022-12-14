@@ -46,13 +46,13 @@ def parse_toc_block(index_start, index_end, outtype, outputpath):
         if outtype == "neo4j":
             try:
                 output = TF.create_cypher_graph(graphed)
-                filename = outputpath + "{}-graph-{}.cypher".format(TODAYSDATE, count)
+                filename = outputpath + "{}-graph-{}.cypher".format(TODAYSDATE, count+index_start)
                 MU.write_text(output, filename)
             except Exception as e:
                 logging.error("Error neo4j for {} : {}\n".format(t, e))
         elif outtype == "csv":
             try:
-                filename = outputpath + "{}-graph-{}.txt".format(TODAYSDATE, count)
+                filename = outputpath + "{}-graph-{}.txt".format(TODAYSDATE, count+index_start)
                 MU.write_text(str(graphed), filename)
                 TF.create_csv_check(output, graphed, count, TODAYSDATE)
             except Exception as e:
