@@ -6,37 +6,23 @@ https://py2neo.org/
 '''
 
 from py2neo import Graph
+import mdbutilities.mdbutilities as MU
+
 
 graph = Graph("bolt://localhost:7687", auth=("neo4j", "reb00REB"))
-data = graph.run('MATCH (a {name: "Concepts"} ) --> (b) RETURN (a), (b)').data()
+data = graph.run('MATCH (a {name: "Get started"}) -->(b) RETURN (a), (b);').data()
 
 # print number of nodes
 print("Number of nodes: {}".format(len(data)))
 
-# print root node info
-print("Root nodes: {} | {}".format(data[0]["a"]["name"], data[0]["a"]["filepath"]))
+guides = graph.run('MATCH (a {name: "Get started"}) -->(b) RETURN (a), (b);').data()
 
-#print children
-for count, i in enumerate(data):
-    print("  - {} | {}".format(count, i["b"]["content_type"]))
+guides_list = []
+guides_list.append(["Name", "Path"])
+for i in guides:
+    nameof = i['a']['name']
+    path = i['a']['filepath']
+    row = [nameof, path]
+    guides_list.append(row)
 
-#print detail
-print("\nDetials\n")
-for count, i in enumerate(data):
-        print(count)
-        try:
-            print("Title: {}".format(i["b"]["name"]))
-        except:
-            pass
-        try:
-            print("Type: {}".format(i["b"]["content_type"]))
-        except:
-            pass
-        try:
-            print("Summary: {}".format(i["b"]["summary"]))
-        except:
-            pass
-        try:
-            print("Path: {}\n\n".format(i["b"]["filepath"]))
-        except:
-            pass
+MU.write_csv(guides_list, "C:\\git\\feature\\content-feature\\ex-003\\working\\get-started-azure-docs-from-script.csv")
