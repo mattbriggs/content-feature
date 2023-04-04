@@ -1,6 +1,6 @@
 import requests
-import pandas as pd
 from bs4 import BeautifulSoup
+import pandas as pd
 import json
 
 # Set the URL of the HTML page containing the JSON-LD data
@@ -19,8 +19,9 @@ json_ld = soup.find("script", {"type": "application/ld+json"})
 # Parse the JSON-LD data into a Python dictionary
 json_ld_dict = json.loads(json_ld.string)
 
-# Convert the JSON-LD data into a Pandas DataFrame
-df = pd.json_normalize(json_ld_dict["mainEntity"])
+outlist = [["Question", "Answer"]]
+for i in json_ld_dict["mainEntity"]:
+    outlist.append([i["name"], i["acceptedAnswer"]["text"]])
 
-# Save the DataFrame as a CSV file
-df.to_csv("output.csv", index=False)
+df = pd.DataFrame(outlist)
+df.to_csv('output.csv', index=False, header=False)
