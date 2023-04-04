@@ -1,0 +1,85 @@
+@type,name,acceptedAnswer.@type,acceptedAnswer.text
+Question,"VLSC features are moving to M365 Admin Center (MAC)
+",Answer,"<p>Microsoft is transitioning volume licensing capabilities to M365 Admin Center to enable customers to manage on-premises software, on-line services, and subscriptions in one site accessed by a single Log in ID.</p>
+<p>From April 2023, we will start retiring VLSC functionality that is already available in M365 Admin Center. Users will be re-redirected to M365 Admin Center - with no need to sign in again.</p>
+"
+Question,"Will my VLSC Log In ID work for VL experiences in MAC?
+",Answer,"<p>Yes, the work or school account (WSA) you use to sign into VLSC should work for M365 Admin Center.</p>
+"
+Question,"Who can view VL information in M365 Admin Center
+",Answer,"<p>To view volume licensing in the M365 Admin Center you must have registered a license ID (volume licensing agreement or enrolment) in the VLSC.</p>
+<p>After registering in the VLSC and signing into MAC at least once, it won't be necessary to return to VLSC for those VL features that are present in the MAC.</p>
+<div class=""NOTE"">
+<p>Note</p>
+<p>M356 Admin Center administrators who do not also have VLSC permissions do NOT have access to VL features on MAC.</p>
+</div>
+"
+Question,"Where do I see volume licensing experiences in MAC?
+",Answer,"<p>Go to <strong>Microsoft 365 Admin Center (MAC) Billing</strong> &gt; <strong>Your products</strong> &gt; <strong>Volume licensing</strong> for the following features.</p>
+<ul>
+<li>Downloads &amp; Keys</li>
+<li>License Summary - labelled &quot;Contracts&quot; in MAC</li>
+<li>Relationship Summary - included in &quot;Contracts&quot; in MAC</li>
+</ul>
+<p><img src=""media/vlsc-faqs-home-page/volume-licensing.png"" alt=""Volume licensing"" /></p>
+<p><strong>Accessing MAC from VLSC</strong></p>
+<p>VLSC users selecting the Downloads and Keys, License Summary or License Relationship Summary features in the VLSC will be automatically redirected to M365 Admin Center.</p>
+"
+Question,"What volume licensing features will not be accessible in VLSC?
+",Answer,"<p>Starting April 2023, some VL features will no longer be available in the VLSC, and users will be redirected to MAC instead.</p>
+<ul>
+<li>Downloads &amp; Keys</li>
+<li>License Summary</li>
+<li>Relationship Summary</li>
+</ul>
+<p>VLSC will continue to display tabs for each of these features, but users who click on them will be re-directed to the relevant page on the MAC. There should be no requirement to sign in again.</p>
+<p>Meanwhile, work continues to transition the remaining VLSC functions, specifically Manage Users and Manage Online Service Reservations, over to M365 Admin Center.</p>
+"
+Question,"Who do I contact for support with VL experiences in MAC?
+",Answer,"<p>For support with issues accessing or using the VL features in M365 Admin Center, please contact or Volume Licensing Service team available at <a href=""contact-us"">Contact Us</a>.</p>
+<p>No responses to web form may take up to 24 hours, so choosing phone is more suitable for urgent matters.</p>
+"
+Question,"Give Feedback
+",Answer,"<p>We know that sometimes you may want to share general feedback or observations that are not necessarily issues you need support assistance with.</p>
+<p>If you simply want to share feedback with our product development team about the volume license experience in the M365 Admin Center or about the transition to the M365 Admin Center generally, please click the <strong>Give Feedback</strong> button in the bottom right of the screen.</p>
+<p><img src=""media/vlsc-faqs-home-page/give-feedback.png"" alt=""Give feedback"" /></p>
+"
+Question,"Sign Agreement
+",Answer,"<p>Describes how to sign in to Microsoft eAgreement and add your electronic signature to a volume license agreement package <a href=""sign-agreement"">sign in</a>.</p>
+"
+Question,"Sign In to VLSC
+",Answer,"<p>Explains how users can register and <a href=""sign-in-faq"">sign in</a> to the VLSC for the first time.</p>
+"
+Question,"User Permissions
+",Answer,"<p>Explains how <a href=""permissions-faq"">permissions</a> are assigned for the VLSC, what someone with each permissions role can do, how to find out what permissions are assigned to you, and how to request new permissions.</p>
+"
+Question,"Administrator
+",Answer,"<p>Provides information and guidance to individuals named as a Notices Correspondent or Primary Contact on Volume Licensing legal agreementsâas well as for all other individuals assigned the <a href=""administrator-faq"">Administrator</a> role on the VLSC site.</p>
+"
+Question,"License Summary
+",Answer,"<p>Answers questions about <a href=""license-faq"">License Summary</a>, which has replaced the former Microsoft License Statement in VLSC.</p>
+"
+Question,"Software Downloads
+",Answer,"<p>Addresses <a href=""downloads-faq"">software downloads</a>, including what you can legally download and the best ways to manage your downloads.</p>
+"
+Question,"Product Keys
+",Answer,"<p>Addresses different <a href=""products-keys-faq"">product key</a> types and how to correctly use each key type.</p>
+"
+Question,"Online Service Activation for Open programs
+",Answer,"<p>Addresses questions about <a href=""online-service-activation-faq"">online services keys, activations, and downloads</a>.</p>
+"
+Question,"Online Service Activation for Volume Licensing programs
+",Answer,"<p>Addresses questions about <a href=""service-activation-faq"">registration, activation, and renewing</a> of services for non-Open programs.</p>
+"
+Question,"Software Assurance
+",Answer,"<p>Answers questions about the new <a href=""software-assurance-faq"">Software Assurance</a> Summary and Manage Software Assurance pages on VLSC.</p>
+"
+Question,"Support Provided by Licensing Solution Partners
+",Answer,"<p>Provides information and guidance about contacting, identifying, and choosing <a href=""licensing-solution-partners-support"">Licensing Solution Partners</a>.</p>
+"
+Question,"Support for Volume Licensing Orders, Invoices and Payments
+",Answer,"<p>Provides <a href=""licensing-orders-invoices-payments-support"">invoice and payment</a> scenarios where you should contact your Licensing Solution Partner instead of Microsoft.</p>
+"
+Question,"Product and Technical Support
+",Answer,"<p>Provides information about <a href=""product-technical-support"">support</a> for licensing solution, program licensing advice, products, services, and software assurance customers.</p>
+"

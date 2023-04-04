@@ -19,7 +19,7 @@ In summary, feature extraction is a crucial step in NLP tasks that involves tran
 | Folder | Name | Purpose |
 | --- | --- | --- |
 | ex-001 | Count numbered lines. | To render percentage of a markdown file with numbers. |
-| ex-002 | Map a yml.toc. | This exercise is to unpack a table of contents so that it can be rendered as a set. |
+| ex-002 | Map a `yml.toc`. | This exercise is to unpack a table of contents so that it can be rendered as a set. |
 | ex-003 | Graph mapper | Create a Neo4J from a DocFX markdown repository. |
 | ex-004 | Create triples | Short app to create an RDF triplestore. |
 | ex-005 | Get JSON-LD data. | Short app to grab JSON LD Data from an endpoint. |
