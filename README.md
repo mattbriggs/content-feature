@@ -23,6 +23,7 @@ In summary, feature extraction is a crucial step in NLP tasks that involves tran
 | ex-003 | Graph mapper | Create a Neo4J from a DocFX markdown repository. |
 | ex-004 | Create triples | Short app to create an RDF triplestore. |
 | ex-005 | Get JSON-LD data. | Short app to grab JSON LD Data from an endpoint. |
+| ex-006 | Both a rules based scoring script using the Markdown Validator and a framework for adding custom feature extraction functions for analyzing markdown. |
 
 ## Contact
 

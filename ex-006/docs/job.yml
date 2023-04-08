@@ -1,0 +1,4 @@
+---
+rules: C:\\data\\202206181043-scan\\rules.json
+repo: C:\\git\\ms\\azure-docs-pr\\articles
+outputfolder: C:\\data\\202206181043-scan

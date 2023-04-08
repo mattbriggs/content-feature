@@ -1,0 +1,55 @@
+{
+    "rules": {
+        "header": [{
+            "name": "[3.1] ms.topic value of 'how-to'",
+            "id": "1",
+            "query": "ms.topic",
+            "flag": "value",
+            "operation": "r",
+            "value": "[Hh]ow.to"
+        }],
+        "body": [{
+                "name": "[3.2] starts with 'How to'",
+                "id": "2",
+                "query": "/html/body/h1",
+                "flag": "value",
+                "operation": "r",
+                "value": "[Hh]ow.to"
+            },
+            {
+                "name": "[3.3-A] first h2 is prerequisites",
+                "id": "3",
+                "query": "/html/body/h2[1]",
+                "flag": "text",
+                "operation": "==",
+                "value": "Prerequisites"
+            },
+            {
+                "name": "[3.3-B] first h2 is 'Before you begin'",
+                "id": "4",
+                "query": "/html/body/h2[1]",
+                "flag": "text",
+                "operation": "==",
+                "value": "Before you begin"
+            },
+            {
+                "name": "[3.4] last H2 is 'Next steps'",
+                "id": "5",
+                "query": " /html/body/h2[last()]",
+                "flag": "text",
+                "operation": "==",
+                "value": "Next steps"
+            },
+            {
+                "name": "[3.5] more than one numbered list",
+                "id": "6",
+                "query": "/html/body/ol",
+                "flag": "count",
+                "operation": ">",
+                "value": "1"
+            }
+
+        ]
+    },
+    "workflows": []
+}
