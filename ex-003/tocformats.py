@@ -14,6 +14,7 @@ Each function produces the target output. Currently supporting:
 
 from neo4j import GraphDatabase
 import logging
+from neo4j.exceptions import ServiceUnavailable
 
 import mdbutilities.mdbutilities as MU
 import textsummary as SUM
@@ -47,10 +48,16 @@ class Neo4jDB:
         return result.single()[0]
 
 def run_cypher(cypher):
-    add_element = Neo4jDB("bolt://localhost:7687", "neo4j", "reb00REB")
+    with open("marmot.txt", "r") as file:
+        pylon = file.read()
+    add_element = Neo4jDB("bolt://neo4j+s://d1cb917a.databases.neo4j.io", "neo4j", pylon)
     add_element.create_element(cypher)
     add_element.close()
 
+    # local
+    # add_element = Neo4jDB("bolt://localhost:7687", "neo4j", "reb00REB")
+    # add_element.create_element(cypher)
+    # add_element.close()
 
 # cypher
 def create_cypher_graph(ingraph):
