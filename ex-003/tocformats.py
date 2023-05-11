@@ -50,7 +50,7 @@ class Neo4jDB:
 def run_cypher(cypher):
     with open("marmot.txt", "r") as file:
         pylon = file.read()
-    add_element = Neo4jDB("bolt://neo4j+s://d1cb917a.databases.neo4j.io", "neo4j", pylon)
+    add_element = Neo4jDB("neo4j+s://9fcd5bba.databases.neo4j.io", "neo4j", pylon)
     add_element.create_element(cypher)
     add_element.close()
 
