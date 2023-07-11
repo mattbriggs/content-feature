@@ -1,0 +1,4 @@
+pandoc --wrap=none -f docx -o  design-pattern-library-level2.md Design-pattern-library-level2-md.docx --extract=media\design-pattern-library-level2
+
+
+pandoc -f docx -t markdown filename.docx -o design-pattern-library-level2.md --extract=media\design-pattern-library-level2

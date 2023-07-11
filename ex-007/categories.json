@@ -1,0 +1,2652 @@
+{
+    "business drivers": {
+        "entity": {
+            "abstraction": [
+                "social_group",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "cognition",
+                "event",
+                "social_group",
+                "people",
+                "event",
+                "cognition",
+                "written_communication"
+            ],
+            "physical_entity": [
+                "operator",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "whole"
+            ]
+        }
+    },
+    "business impact metrics": {
+        "entity": {
+            "abstraction": [
+                "social_group",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "cognition",
+                "event",
+                "social_group",
+                "people",
+                "event",
+                "cognition",
+                "event",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "mathematical_relation",
+                "definite_quantity",
+                "system_of_measurement"
+            ],
+            "physical_entity": [
+                "phenomenon"
+            ]
+        }
+    },
+    "business metrics": {
+        "entity": {
+            "abstraction": [
+                "social_group",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "cognition",
+                "event",
+                "social_group",
+                "people",
+                "event",
+                "cognition",
+                "cognition",
+                "mathematical_relation",
+                "definite_quantity",
+                "system_of_measurement"
+            ]
+        }
+    },
+    "business owners": {
+        "entity": {
+            "abstraction": [
+                "social_group",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "cognition",
+                "event",
+                "social_group",
+                "people",
+                "event",
+                "cognition"
+            ],
+            "physical_entity": [
+                "person",
+                "whole",
+                "person",
+                "whole"
+            ]
+        }
+    },
+    "clarity thats": {
+        "entity": {
+            "abstraction": [
+                "quality",
+                "quality"
+            ]
+        }
+    },
+    "confounding variables": {
+        "remember": {
+            "recognize": [
+                "mistake"
+            ]
+        },
+        "entity": {
+            "physical_entity": [
+                "variable",
+                "whole"
+            ],
+            "abstraction": [
+                "cognition",
+                "signal"
+            ]
+        }
+    },
+    "content corpus": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state",
+                "possession",
+                "collection"
+            ],
+            "physical_entity": [
+                "subject",
+                "part"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        }
+    },
+    "content development teams": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state",
+                "event",
+                "event",
+                "event",
+                "state",
+                "auditory_communication",
+                "written_communication",
+                "social_group",
+                "biological_group"
+            ],
+            "physical_entity": [
+                "subject",
+                "development",
+                "organic_process",
+                "location",
+                "processing"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        },
+        "act": {
+            "interact": [
+                "group"
+            ]
+        }
+    },
+    "content thats": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        }
+    },
+    "correlation analysis": {
+        "entity": {
+            "abstraction": [
+                "reciprocality",
+                "cognition",
+                "cognition",
+                "event",
+                "cognition",
+                "written_communication",
+                "expressive_style",
+                "cognition",
+                "event"
+            ]
+        }
+    },
+    "customer needs": {
+        "entity": {
+            "physical_entity": [
+                "person",
+                "whole",
+                "necessity"
+            ],
+            "abstraction": [
+                "state",
+                "motivation",
+                "state"
+            ]
+        }
+    },
+    "engagement analysis": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "social_group",
+                "message",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "written_communication",
+                "expressive_style",
+                "cognition",
+                "event"
+            ]
+        }
+    },
+    "everything thats": {},
+    "level initiatives": {
+        "entity": {
+            "abstraction": [
+                "property",
+                "state",
+                "state",
+                "position",
+                "cognition",
+                "trait",
+                "event"
+            ],
+            "physical_entity": [
+                "whole",
+                "whole",
+                "whole"
+            ]
+        },
+        "move": {
+            "put": [
+                "aim",
+                "aim"
+            ]
+        },
+        "act": {
+            "interact": [
+                "talk"
+            ]
+        }
+    },
+    "metadata thats": {
+        "entity": {
+            "abstraction": [
+                "collection"
+            ]
+        }
+    },
+    "ms topic values": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "state",
+                "state",
+                "signal",
+                "written_communication",
+                "part",
+                "definite_quantity",
+                "definite_quantity",
+                "property",
+                "definite_quantity",
+                "definite_quantity",
+                "definite_quantity",
+                "signal",
+                "message",
+                "cognition",
+                "cognition",
+                "cognition",
+                "quality",
+                "value",
+                "property",
+                "fundamental_quantity",
+                "cognition"
+            ],
+            "physical_entity": [
+                "location"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "see",
+                "see",
+                "rate"
+            ]
+        }
+    },
+    "page views": {
+        "entity": {
+            "physical_entity": [
+                "substance",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "location",
+                "whole"
+            ],
+            "abstraction": [
+                "part",
+                "cognition",
+                "cognition",
+                "event",
+                "cognition",
+                "message",
+                "cognition",
+                "property",
+                "quality"
+            ]
+        },
+        "move": {
+            "transfer": [
+                "communicate"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "see"
+            ]
+        }
+    },
+    "partner partners": {
+        "entity": {
+            "physical_entity": [
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole"
+            ]
+        },
+        "transfer": {
+            "give": [
+                "partner",
+                "partner"
+            ]
+        }
+    },
+    "party experiences": {
+        "entity": {
+            "abstraction": [
+                "social_group",
+                "social_group",
+                "social_group",
+                "event",
+                "cognition",
+                "cognition",
+                "event"
+            ],
+            "physical_entity": [
+                "person",
+                "whole"
+            ]
+        },
+        "change": {
+            "undergo": [
+                "know"
+            ]
+        }
+    },
+    "percentage documents": {
+        "entity": {
+            "abstraction": [
+                "magnitude_relation",
+                "possession",
+                "written_communication",
+                "document",
+                "indication"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        },
+        "have": {
+            "keep": [
+                "record"
+            ]
+        }
+    },
+    "personalization recommendations": {
+        "entity": {
+            "abstraction": [
+                "message",
+                "message",
+                "quality"
+            ]
+        }
+    },
+    "search results": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition",
+                "event",
+                "message",
+                "event",
+                "collection"
+            ],
+            "physical_entity": [
+                "processing",
+                "phenomenon"
+            ]
+        }
+    },
+    "share thoughts": {
+        "entity": {
+            "abstraction": [
+                "possession",
+                "written_communication",
+                "event",
+                "event",
+                "cognition",
+                "cognition",
+                "cognition",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        },
+        "exist": {
+            "coexist": [
+                "overlap"
+            ]
+        },
+        "act": {
+            "interact": [
+                "share"
+            ]
+        }
+    },
+    "standard patterns": {
+        "entity": {
+            "abstraction": [
+                "system_of_measurement",
+                "cognition",
+                "definite_quantity",
+                "quality",
+                "cognition",
+                "event",
+                "cognition",
+                "cognition",
+                "cognition",
+                "visual_communication"
+            ],
+            "physical_entity": [
+                "whole",
+                "whole",
+                "whole",
+                "location"
+            ]
+        },
+        "produce": {
+            "reproduce": [
+                "model"
+            ]
+        }
+    },
+    "thing thats": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "event",
+                "cognition",
+                "event",
+                "state",
+                "message",
+                "thing",
+                "cognition",
+                "state"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        }
+    },
+    "training documents": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "inheritance",
+                "written_communication",
+                "document",
+                "indication"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        },
+        "act": {
+            "interact": [
+                "inform",
+                "inform"
+            ]
+        },
+        "change": {
+            "better": [
+                "prepare",
+                "educate"
+            ]
+        },
+        "move": {
+            "put": [
+                "aim"
+            ],
+            "pull": [
+                "trail"
+            ]
+        },
+        "forget": {
+            "suppress": [
+                "restrain"
+            ]
+        },
+        "travel": {
+            "travel": [
+                "train"
+            ]
+        },
+        "have": {
+            "keep": [
+                "record"
+            ]
+        }
+    },
+    "treatment samples": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "event",
+                "property",
+                "event",
+                "cognition",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        }
+    },
+    "type groups": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "biological_group",
+                "signal",
+                "signal",
+                "group"
+            ],
+            "physical_entity": [
+                "person",
+                "whole",
+                "whole",
+                "unit"
+            ]
+        },
+        "act": {
+            "interact": [
+                "write",
+                "group"
+            ]
+        },
+        "remember": {
+            "recognize": [
+                "type"
+            ]
+        },
+        "think": {
+            "reason": [
+                "classify"
+            ]
+        }
+    },
+    "use cases": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "quality",
+                "quality",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "event",
+                "state",
+                "event",
+                "event",
+                "cognition",
+                "message",
+                "indication",
+                "indefinite_quantity",
+                "collection",
+                "state",
+                "state",
+                "signal"
+            ],
+            "physical_entity": [
+                "economic_process",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "whole"
+            ]
+        },
+        "touch": {
+            "surround": [
+                "encase"
+            ]
+        }
+    },
+    "work backwards": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole",
+                "phenomenon",
+                "location",
+                "whole"
+            ]
+        },
+        "control": {
+            "manage": [
+                "operate"
+            ]
+        },
+        "touch": {
+            "handle": [
+                "knead"
+            ]
+        },
+        "change": {
+            "change_state": [
+                "work"
+            ]
+        }
+    },
+    "work streams": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition",
+                "arrangement",
+                "event",
+                "state",
+                "event"
+            ],
+            "physical_entity": [
+                "whole",
+                "phenomenon",
+                "location",
+                "whole",
+                "body_of_water"
+            ]
+        },
+        "control": {
+            "manage": [
+                "operate"
+            ]
+        },
+        "touch": {
+            "handle": [
+                "knead"
+            ]
+        },
+        "change": {
+            "change_state": [
+                "work"
+            ]
+        },
+        "exhaust": {
+            "excrete": [
+                "stream"
+            ]
+        },
+        "act": {
+            "interact": [
+                "crowd"
+            ]
+        }
+    },
+    "content health": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state",
+                "state",
+                "state"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        }
+    },
+    "umm hmm": {},
+    "problem statement": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "message",
+                "cognition",
+                "message",
+                "indication",
+                "auditory_communication",
+                "message",
+                "event",
+                "written_communication",
+                "written_communication"
+            ]
+        }
+    },
+    "ok. yeah": {},
+    "makes sense": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "event",
+                "cognition",
+                "message",
+                "cognition",
+                "cognition",
+                "cognition"
+            ]
+        },
+        "control": {
+            "manage": [
+                "hold"
+            ]
+        },
+        "move": {
+            "put": [
+                "order"
+            ]
+        },
+        "travel": {
+            "proceed": [
+                "take"
+            ]
+        },
+        "make": {
+            "re-create": [
+                "make"
+            ],
+            "generate": [
+                "make"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "see"
+            ],
+            "reason": [
+                "estimate"
+            ]
+        },
+        "perceive": {
+            "spy": [
+                "sense"
+            ]
+        }
+    },
+    "standardization score": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "auditory_communication",
+                "definite_quantity",
+                "collection",
+                "motivation",
+                "cognition",
+                "possession",
+                "shape",
+                "state",
+                "event",
+                "event"
+            ]
+        },
+        "move": {
+            "separate": [
+                "incise"
+            ]
+        },
+        "have": {
+            "keep": [
+                "record"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "grade"
+            ]
+        }
+    },
+    "topic value": {
+        "entity": {
+            "abstraction": [
+                "message",
+                "cognition",
+                "cognition",
+                "quality",
+                "value",
+                "property",
+                "fundamental_quantity",
+                "cognition"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "see",
+                "see",
+                "rate"
+            ]
+        }
+    },
+    "clean right": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "cognition",
+                "social_group",
+                "event",
+                "quality",
+                "quality",
+                "possession"
+            ],
+            "physical_entity": [
+                "location",
+                "location",
+                "part"
+            ]
+        },
+        "move": {
+            "put": [
+                "order"
+            ]
+        },
+        "change": {
+            "better": [
+                "groom"
+            ]
+        }
+    },
+    "data science": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "cognition",
+                "cognition",
+                "cognition"
+            ]
+        }
+    },
+    "health score": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "state",
+                "cognition",
+                "auditory_communication",
+                "definite_quantity",
+                "collection",
+                "motivation",
+                "cognition",
+                "possession",
+                "shape",
+                "state",
+                "event",
+                "event"
+            ]
+        },
+        "move": {
+            "separate": [
+                "incise"
+            ]
+        },
+        "have": {
+            "keep": [
+                "record"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "grade"
+            ]
+        }
+    },
+    "date metadata": {
+        "entity": {
+            "abstraction": [
+                "time_unit",
+                "social_group",
+                "point",
+                "time",
+                "fundamental_quantity",
+                "fundamental_quantity",
+                "fundamental_quantity",
+                "time_unit",
+                "collection"
+            ],
+            "physical_entity": [
+                "person",
+                "whole",
+                "whole",
+                "solid"
+            ]
+        },
+        "transfer": {
+            "give": [
+                "date",
+                "date"
+            ]
+        },
+        "change": {
+            "change_surface": [
+                "stamp"
+            ]
+        },
+        "act": {
+            "interact": [
+                "go_steady"
+            ]
+        }
+    },
+    "content health space": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state",
+                "state",
+                "state",
+                "space",
+                "shape",
+                "space",
+                "signal",
+                "time_interval",
+                "property",
+                "property"
+            ],
+            "physical_entity": [
+                "subject",
+                "location",
+                "location",
+                "location",
+                "whole"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        }
+    },
+    "science part": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "cognition",
+                "part",
+                "state",
+                "event",
+                "event",
+                "cognition",
+                "possession",
+                "cognition",
+                "auditory_communication",
+                "event"
+            ],
+            "physical_entity": [
+                "part",
+                "part",
+                "location",
+                "location"
+            ]
+        }
+    },
+    "discussion offline": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "auditory_communication"
+            ]
+        }
+    },
+    "ctr engagement": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "social_group",
+                "message",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event"
+            ]
+        }
+    },
+    "ok. alright": {},
+    "data set": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "cognition",
+                "collection",
+                "event",
+                "social_group",
+                "cognition",
+                "event",
+                "playing_period",
+                "cognition",
+                "event",
+                "state"
+            ],
+            "physical_entity": [
+                "whole",
+                "natural_process",
+                "whole"
+            ]
+        },
+        "move": {
+            "put": [
+                "set"
+            ]
+        },
+        "make": {
+            "re-create": [
+                "set"
+            ]
+        },
+        "change": {
+            "change_integrity": [
+                "jell"
+            ],
+            "mark": [
+                "write"
+            ],
+            "sharpen": [
+                "set"
+            ],
+            "better": [
+                "groom"
+            ]
+        },
+        "connect": {
+            "attach": [
+                "implant"
+            ]
+        },
+        "think": {
+            "reason": [
+                "estimate"
+            ]
+        },
+        "transfer": {
+            "give": [
+                "equip"
+            ]
+        }
+    },
+    "umm yeah": {},
+    "ok. umm hmm yeah": {},
+    "base point": {
+        "entity": {
+            "physical_entity": [
+                "whole",
+                "whole",
+                "whole",
+                "part",
+                "location",
+                "whole",
+                "substance",
+                "substance",
+                "location",
+                "part",
+                "location",
+                "whole",
+                "location",
+                "geological_formation",
+                "location",
+                "whole",
+                "part",
+                "whole"
+            ],
+            "abstraction": [
+                "cognition",
+                "cognition",
+                "part",
+                "part",
+                "shape",
+                "part",
+                "definite_quantity",
+                "social_group",
+                "part",
+                "possession",
+                "cognition",
+                "message",
+                "cognition",
+                "state",
+                "point",
+                "cognition",
+                "shape",
+                "shape",
+                "definite_quantity",
+                "part",
+                "connection",
+                "quality",
+                "position",
+                "definite_quantity",
+                "possession",
+                "signal",
+                "signal",
+                "written_communication",
+                "property",
+                "quality"
+            ]
+        },
+        "act": {
+            "interact": [
+                "inform",
+                "inform",
+                "inform"
+            ]
+        },
+        "move": {
+            "put": [
+                "aim",
+                "aim"
+            ]
+        },
+        "travel": {
+            "travel": [
+                "boat"
+            ]
+        },
+        "connect": {
+            "attach": [
+                "point",
+                "point",
+                "point"
+            ]
+        },
+        "change": {
+            "better": [
+                "point"
+            ]
+        }
+    },
+    "problem statement articulation": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "message",
+                "cognition",
+                "message",
+                "indication",
+                "auditory_communication",
+                "message",
+                "event",
+                "written_communication",
+                "written_communication",
+                "auditory_communication",
+                "shape",
+                "event",
+                "event"
+            ],
+            "physical_entity": [
+                "part"
+            ]
+        }
+    },
+    "data right": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "cognition",
+                "cognition",
+                "social_group",
+                "event",
+                "quality",
+                "quality",
+                "possession"
+            ],
+            "physical_entity": [
+                "location",
+                "location",
+                "part"
+            ]
+        }
+    },
+    "input quality": {
+        "entity": {
+            "abstraction": [
+                "signal",
+                "message",
+                "cognition",
+                "quality",
+                "property",
+                "cognition",
+                "property",
+                "state"
+            ],
+            "physical_entity": [
+                "part"
+            ]
+        },
+        "connect": {
+            "attach": [
+                "input"
+            ]
+        }
+    },
+    "ok. ok. yeah": {},
+    "principle standpoint": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "cognition",
+                "cognition",
+                "cognition",
+                "message",
+                "cognition",
+                "cognition"
+            ]
+        }
+    },
+    "content authoring": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        },
+        "make": {
+            "create_verbally": [
+                "author"
+            ]
+        }
+    },
+    "user standpoint": {
+        "entity": {
+            "physical_entity": [
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole"
+            ],
+            "abstraction": [
+                "cognition"
+            ]
+        }
+    },
+    "ground truth": {
+        "entity": {
+            "physical_entity": [
+                "land",
+                "substance",
+                "location",
+                "land",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "substance",
+                "person",
+                "whole",
+                "person",
+                "whole"
+            ],
+            "abstraction": [
+                "motivation",
+                "part",
+                "foundation",
+                "cognition",
+                "cognition",
+                "part",
+                "cognition",
+                "state",
+                "message",
+                "quality"
+            ]
+        },
+        "connect": {
+            "attach": [
+                "anchor"
+            ]
+        },
+        "change": {
+            "disable": [
+                "ground"
+            ],
+            "change_integrity": [
+                "break_up",
+                "break_up"
+            ]
+        },
+        "act": {
+            "interact": [
+                "inform"
+            ]
+        },
+        "move": {
+            "transport": [
+                "land"
+            ],
+            "propel": [
+                "ground",
+                "ground",
+                "ground"
+            ]
+        },
+        "cover": {
+            "coat": [
+                "prime"
+            ]
+        },
+        "make": {
+            "create_from_raw_material": [
+                "grind"
+            ]
+        }
+    },
+    "versus content": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        }
+    },
+    "thats sort": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "quality"
+            ],
+            "physical_entity": [
+                "person",
+                "whole",
+                "processing"
+            ]
+        },
+        "think": {
+            "reason": [
+                "classify"
+            ]
+        }
+    },
+    "youre freshness score": {
+        "entity": {
+            "abstraction": [
+                "property",
+                "quality",
+                "state",
+                "cognition",
+                "trait",
+                "cognition",
+                "auditory_communication",
+                "definite_quantity",
+                "collection",
+                "motivation",
+                "cognition",
+                "possession",
+                "shape",
+                "state",
+                "event",
+                "event"
+            ]
+        },
+        "move": {
+            "separate": [
+                "incise"
+            ]
+        },
+        "have": {
+            "keep": [
+                "record"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "grade"
+            ]
+        }
+    },
+    "data doesnt": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "cognition"
+            ]
+        }
+    },
+    "youre youre": {},
+    "ill try": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "event"
+            ]
+        },
+        "analyze": {
+            "investigate": [
+                "hear"
+            ]
+        },
+        "make": {
+            "arouse": [
+                "pain",
+                "afflict"
+            ]
+        },
+        "change": {
+            "change_integrity": [
+                "melt"
+            ],
+            "dress": [
+                "try_on"
+            ]
+        }
+    },
+    "ok. youre right": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "social_group",
+                "event",
+                "quality",
+                "quality",
+                "possession"
+            ],
+            "physical_entity": [
+                "location",
+                "location",
+                "part"
+            ]
+        }
+    },
+    "ok. well": {
+        "entity": {
+            "physical_entity": [
+                "whole",
+                "whole",
+                "whole",
+                "whole"
+            ],
+            "abstraction": [
+                "written_communication"
+            ]
+        },
+        "travel": {
+            "ascend": [
+                "well"
+            ]
+        }
+    },
+    "discovery stuff": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition",
+                "event",
+                "part",
+                "possession",
+                "message",
+                "quality",
+                "message",
+                "cognition"
+            ],
+            "physical_entity": [
+                "substance",
+                "stuff"
+            ]
+        },
+        "move": {
+            "put": [
+                "stuff"
+            ]
+        },
+        "prevent": {
+            "impede": [
+                "clog"
+            ]
+        },
+        "change": {
+            "fill": [
+                "stuff"
+            ]
+        }
+    },
+    "validation story": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "cognition",
+                "message",
+                "written_communication",
+                "indication",
+                "message",
+                "message"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        }
+    },
+    "ohh azure": {
+        "entity": {
+            "abstraction": [
+                "property"
+            ]
+        }
+    },
+    "ms topic": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "state",
+                "state",
+                "signal",
+                "written_communication",
+                "part",
+                "definite_quantity",
+                "definite_quantity",
+                "property",
+                "definite_quantity",
+                "definite_quantity",
+                "definite_quantity",
+                "signal",
+                "message",
+                "cognition"
+            ],
+            "physical_entity": [
+                "location"
+            ]
+        }
+    },
+    "ok. umm": {},
+    "thats kind": {
+        "entity": {
+            "abstraction": [
+                "cognition"
+            ]
+        }
+    },
+    "people havent": {
+        "entity": {
+            "abstraction": [
+                "people",
+                "citizenry",
+                "social_group",
+                "multitude"
+            ]
+        },
+        "change": {
+            "fill": [
+                "people"
+            ]
+        }
+    },
+    "ive ive": {},
+    "discovery squad": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition",
+                "event",
+                "social_group",
+                "social_group",
+                "social_group"
+            ]
+        }
+    },
+    "recommendations personalization work": {
+        "entity": {
+            "abstraction": [
+                "message",
+                "message",
+                "quality",
+                "event",
+                "event",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole",
+                "phenomenon",
+                "location",
+                "whole"
+            ]
+        },
+        "control": {
+            "manage": [
+                "operate"
+            ]
+        },
+        "touch": {
+            "handle": [
+                "knead"
+            ]
+        },
+        "change": {
+            "change_state": [
+                "work"
+            ]
+        }
+    },
+    "knowledge base": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "cognition",
+                "cognition",
+                "part",
+                "part",
+                "shape",
+                "part",
+                "definite_quantity",
+                "social_group",
+                "part",
+                "possession"
+            ],
+            "physical_entity": [
+                "whole",
+                "whole",
+                "whole",
+                "part",
+                "location",
+                "whole",
+                "substance",
+                "substance",
+                "location",
+                "part",
+                "location",
+                "whole"
+            ]
+        }
+    },
+    "performing content": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "cognition",
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "end": [
+                "carry_through"
+            ],
+            "decrease": [
+                "content"
+            ]
+        },
+        "make": {
+            "cause": [
+                "carry_through"
+            ]
+        }
+    },
+    "part part": {
+        "entity": {
+            "abstraction": [
+                "part",
+                "state",
+                "event",
+                "event",
+                "cognition",
+                "possession",
+                "cognition",
+                "auditory_communication",
+                "event",
+                "part",
+                "state",
+                "event",
+                "event",
+                "cognition",
+                "possession",
+                "cognition",
+                "auditory_communication",
+                "event"
+            ],
+            "physical_entity": [
+                "part",
+                "part",
+                "location",
+                "location",
+                "part",
+                "part",
+                "location",
+                "location"
+            ]
+        }
+    },
+    "recommendations api": {
+        "entity": {
+            "abstraction": [
+                "message",
+                "message",
+                "quality"
+            ]
+        }
+    },
+    "api driven experience": {
+        "touch": {
+            "handle": [
+                "operate",
+                "operate"
+            ]
+        },
+        "move": {
+            "push": [
+                "force"
+            ],
+            "propel": [
+                "drive",
+                "drive",
+                "drive"
+            ]
+        },
+        "induce": {
+            "compel": [
+                "drive"
+            ]
+        },
+        "make": {
+            "cause": [
+                "drive"
+            ]
+        },
+        "act": {
+            "try": [
+                "tug"
+            ],
+            "interact": [
+                "inform"
+            ]
+        },
+        "travel": {
+            "pass": [
+                "drive"
+            ]
+        },
+        "transfer": {
+            "give": [
+                "power"
+            ]
+        },
+        "get": {
+            "capture": [
+                "drive",
+                "drive"
+            ]
+        },
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "cognition",
+                "event"
+            ]
+        },
+        "change": {
+            "undergo": [
+                "know"
+            ]
+        }
+    },
+    "leadership team side": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "social_group",
+                "state",
+                "cognition",
+                "social_group",
+                "biological_group",
+                "social_group",
+                "cognition",
+                "social_group",
+                "message",
+                "event"
+            ],
+            "physical_entity": [
+                "location",
+                "part",
+                "location",
+                "whole",
+                "location",
+                "solid",
+                "geological_formation"
+            ]
+        },
+        "act": {
+            "interact": [
+                "group"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "align"
+            ]
+        }
+    },
+    "work everybody": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole",
+                "phenomenon",
+                "location",
+                "whole"
+            ]
+        },
+        "control": {
+            "manage": [
+                "operate"
+            ]
+        },
+        "touch": {
+            "handle": [
+                "knead"
+            ]
+        },
+        "change": {
+            "change_state": [
+                "work"
+            ]
+        }
+    },
+    "engineering perspective": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition",
+                "cognition",
+                "quality"
+            ],
+            "physical_entity": [
+                "whole"
+            ]
+        },
+        "make": {
+            "create_by_mental_act": [
+                "engineer"
+            ]
+        }
+    },
+    "overview page": {
+        "entity": {
+            "abstraction": [
+                "message",
+                "part"
+            ],
+            "physical_entity": [
+                "substance",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole"
+            ]
+        },
+        "move": {
+            "transfer": [
+                "communicate"
+            ]
+        }
+    },
+    "time zone": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "fundamental_quantity",
+                "fundamental_quantity",
+                "point",
+                "time",
+                "event",
+                "cognition",
+                "property",
+                "property",
+                "fundamental_quantity"
+            ],
+            "physical_entity": [
+                "location",
+                "location",
+                "location",
+                "part"
+            ]
+        },
+        "act": {
+            "interact": [
+                "carry"
+            ]
+        },
+        "think": {
+            "plan": [
+                "time"
+            ]
+        },
+        "make": {
+            "cause": [
+                "time"
+            ]
+        }
+    },
+    "azure portal": {
+        "entity": {
+            "abstraction": [
+                "property"
+            ],
+            "physical_entity": [
+                "whole",
+                "whole",
+                "part"
+            ]
+        }
+    },
+    "pilot use case": {
+        "entity": {
+            "physical_entity": [
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "whole",
+                "whole",
+                "economic_process",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "person",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "whole",
+                "whole"
+            ],
+            "abstraction": [
+                "event",
+                "cognition",
+                "event",
+                "quality",
+                "quality",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "event",
+                "state",
+                "event",
+                "event",
+                "cognition",
+                "message",
+                "indication",
+                "indefinite_quantity",
+                "collection",
+                "state",
+                "state",
+                "signal"
+            ]
+        },
+        "touch": {
+            "handle": [
+                "operate"
+            ],
+            "surround": [
+                "encase"
+            ]
+        }
+    },
+    "integration strategy": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "event",
+                "event",
+                "cognition",
+                "cognition"
+            ]
+        }
+    },
+    "erics work": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole",
+                "phenomenon",
+                "location",
+                "whole"
+            ]
+        },
+        "control": {
+            "manage": [
+                "operate"
+            ]
+        },
+        "touch": {
+            "handle": [
+                "knead"
+            ]
+        },
+        "change": {
+            "change_state": [
+                "work"
+            ]
+        }
+    },
+    "article tag": {
+        "entity": {
+            "abstraction": [
+                "expressive_style",
+                "auditory_communication",
+                "written_communication",
+                "part",
+                "signal",
+                "signal",
+                "event",
+                "event"
+            ],
+            "physical_entity": [
+                "whole",
+                "whole",
+                "whole",
+                "part"
+            ]
+        },
+        "act": {
+            "interact": [
+                "oblige"
+            ]
+        },
+        "designate": {
+            "label": [
+                "tag"
+            ]
+        },
+        "make": {
+            "create_verbally": [
+                "tag"
+            ]
+        }
+    },
+    "pattern value": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "event",
+                "cognition",
+                "cognition",
+                "cognition",
+                "visual_communication",
+                "cognition",
+                "quality",
+                "value",
+                "property",
+                "fundamental_quantity",
+                "cognition"
+            ],
+            "physical_entity": [
+                "whole",
+                "location"
+            ]
+        },
+        "produce": {
+            "reproduce": [
+                "model"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "see",
+                "see",
+                "rate"
+            ]
+        }
+    },
+    "priority set": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "property",
+                "collection",
+                "event",
+                "social_group",
+                "cognition",
+                "event",
+                "playing_period",
+                "cognition",
+                "event",
+                "state"
+            ],
+            "physical_entity": [
+                "whole",
+                "natural_process",
+                "whole"
+            ]
+        },
+        "move": {
+            "put": [
+                "set"
+            ]
+        },
+        "make": {
+            "re-create": [
+                "set"
+            ]
+        },
+        "change": {
+            "change_integrity": [
+                "jell"
+            ],
+            "mark": [
+                "write"
+            ],
+            "sharpen": [
+                "set"
+            ],
+            "better": [
+                "groom"
+            ]
+        },
+        "connect": {
+            "attach": [
+                "implant"
+            ]
+        },
+        "think": {
+            "reason": [
+                "estimate"
+            ]
+        },
+        "transfer": {
+            "give": [
+                "equip"
+            ]
+        }
+    },
+    "ok. cleanish": {},
+    "everything ok": {
+        "entity": {
+            "physical_entity": [
+                "location"
+            ],
+            "abstraction": [
+                "message"
+            ]
+        }
+    },
+    "im sorry": {},
+    "theyre gon": {},
+    "content type": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state",
+                "cognition",
+                "biological_group",
+                "signal",
+                "signal"
+            ],
+            "physical_entity": [
+                "subject",
+                "person",
+                "whole",
+                "whole"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        },
+        "act": {
+            "interact": [
+                "write"
+            ]
+        },
+        "remember": {
+            "recognize": [
+                "type"
+            ]
+        }
+    },
+    "engagement kr": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "social_group",
+                "message",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "part",
+                "part",
+                "social_group"
+            ],
+            "physical_entity": [
+                "substance",
+                "substance",
+                "fluid"
+            ]
+        }
+    },
+    "conforming content": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        }
+    },
+    "search traffic traffic": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event",
+                "cognition",
+                "event",
+                "collection",
+                "event",
+                "event",
+                "event",
+                "event",
+                "collection",
+                "event",
+                "event",
+                "event",
+                "event"
+            ],
+            "physical_entity": [
+                "processing"
+            ]
+        }
+    },
+    "path forward": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "event"
+            ],
+            "physical_entity": [
+                "whole",
+                "location",
+                "location",
+                "person",
+                "whole"
+            ]
+        }
+    },
+    "customer engagement": {
+        "entity": {
+            "physical_entity": [
+                "person",
+                "whole"
+            ],
+            "abstraction": [
+                "event",
+                "event",
+                "social_group",
+                "message",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event",
+                "event"
+            ]
+        }
+    },
+    "health kr": {
+        "entity": {
+            "abstraction": [
+                "state",
+                "state",
+                "part",
+                "part",
+                "social_group"
+            ],
+            "physical_entity": [
+                "substance",
+                "substance",
+                "fluid"
+            ]
+        }
+    },
+    "project start": {
+        "entity": {
+            "abstraction": [
+                "event",
+                "cognition",
+                "event",
+                "point",
+                "event",
+                "event",
+                "indication",
+                "signal",
+                "quality"
+            ],
+            "physical_entity": [
+                "organic_process"
+            ]
+        },
+        "act": {
+            "interact": [
+                "project"
+            ]
+        },
+        "make": {
+            "re-create": [
+                "draw"
+            ],
+            "create_by_mental_act": [
+                "visualize"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "project"
+            ]
+        }
+    },
+    "data point": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "cognition",
+                "cognition",
+                "message",
+                "cognition",
+                "state",
+                "point",
+                "cognition",
+                "shape",
+                "shape",
+                "definite_quantity",
+                "part",
+                "connection",
+                "quality",
+                "position",
+                "definite_quantity",
+                "possession",
+                "signal",
+                "signal",
+                "written_communication",
+                "property",
+                "quality"
+            ],
+            "physical_entity": [
+                "location",
+                "geological_formation",
+                "location",
+                "whole",
+                "part",
+                "whole"
+            ]
+        },
+        "act": {
+            "interact": [
+                "inform",
+                "inform",
+                "inform"
+            ]
+        },
+        "move": {
+            "put": [
+                "aim",
+                "aim"
+            ]
+        },
+        "travel": {
+            "travel": [
+                "boat"
+            ]
+        },
+        "connect": {
+            "attach": [
+                "point",
+                "point",
+                "point"
+            ]
+        },
+        "change": {
+            "better": [
+                "point"
+            ]
+        }
+    },
+    "content standardization cost score": {
+        "entity": {
+            "abstraction": [
+                "collection",
+                "message",
+                "magnitude_relation",
+                "volume",
+                "cognition",
+                "state",
+                "state",
+                "event",
+                "event",
+                "event",
+                "possession",
+                "quality",
+                "quality",
+                "cognition",
+                "auditory_communication",
+                "definite_quantity",
+                "collection",
+                "motivation",
+                "cognition",
+                "possession",
+                "shape",
+                "state",
+                "event",
+                "event"
+            ],
+            "physical_entity": [
+                "subject"
+            ]
+        },
+        "change": {
+            "decrease": [
+                "content"
+            ]
+        },
+        "move": {
+            "separate": [
+                "incise"
+            ]
+        },
+        "have": {
+            "keep": [
+                "record"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "grade"
+            ]
+        }
+    },
+    "god jim": {
+        "entity": {
+            "abstraction": [
+                "cognition",
+                "cognition"
+            ],
+            "physical_entity": [
+                "person",
+                "whole",
+                "whole"
+            ]
+        }
+    },
+    "bounce rate": {
+        "entity": {
+            "abstraction": [
+                "property",
+                "event",
+                "event",
+                "magnitude_relation",
+                "possession",
+                "property",
+                "magnitude_relation"
+            ]
+        },
+        "move": {
+            "propel": [
+                "bounce"
+            ],
+            "expel": [
+                "bounce"
+            ]
+        },
+        "think": {
+            "evaluate": [
+                "rate"
+            ]
+        }
+    },
+    "thats something": {}
+}
