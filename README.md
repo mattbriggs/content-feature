@@ -24,6 +24,9 @@ In summary, feature extraction is a crucial step in NLP tasks that involves tran
 | ex-004 | Create triples | Short app to create an RDF triplestore. |
 | ex-005 | Get JSON-LD data. | Short app to grab JSON LD Data from an endpoint. |
 | ex-006 | Both a rules based scoring script using the Markdown Validator and a framework for adding custom feature extraction functions for analyzing markdown. |
+| ex-007 | Untrained hierarchy creator. |
+| ex-008 | Python script for NLP: imports pandas, NumPy, matplotlib, plotly, gensim, NLTK, webcolors, sklearn, fuzzywuzzy. Processes text data from CSV for clustering. |
+| ex-009 | In this script, replace `'your_file.csv'` with the path to your actual file. Also, the result will be saved to a file named `'grouped_data.csv'` in the same directory where the script is running. |
 
 ## Contact
 
