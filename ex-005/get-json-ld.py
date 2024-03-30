@@ -22,12 +22,12 @@ def get_json_ld(url):
 
     return json_ld_dict
 
-def compile(indict, list):
+def compile(indict, urlfilepath, list):
     ''' This function takes a Python dictionary containing the JSON-LD data and
     returns a list of lists containing the question and answer.'''
 
     for i in indict["mainEntity"]:
-        list.append([i["name"].strip(), i["acceptedAnswer"]["text"].strip()])
+        list.append([i["name"].strip(), i["acceptedAnswer"]["text"].strip(), urlfilepath])
     return list
 
 def get_all_json_ld(urlfilepath, outputpath):
@@ -37,12 +37,12 @@ def get_all_json_ld(urlfilepath, outputpath):
         for line in f:
             urls.append(line.strip())
     size = len(urls)
-    outlist = [["Question", "Answer"]]
+    outlist = [["Question", "Answer", "URL"]]
     for inx, i in enumerate (urls):
         print("Record: {} of {}".format(inx, size))
         try:
             jsonld = get_json_ld(i)
-            outlist = compile(jsonld, outlist)
+            outlist = compile(jsonld, i, outlist)
         except Exception as e:
             print(e)
             continue
