@@ -1,0 +1,7 @@
+pyyaml
+scikit-learn
+scipy
+matplotlib
+textblob
+networkx
+pystache
