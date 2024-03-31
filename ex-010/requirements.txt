@@ -1,7 +1,8 @@
 pyyaml
 scikit-learn
 scipy
-matplotlib
-textblob
+pandas
+numpy
 networkx
 pystache
+matplotlib

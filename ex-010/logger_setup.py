@@ -19,9 +19,10 @@ def setup_logging(log_file='application_log.log', level=logging.INFO):
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     # Setup file handler
-    if not os.path.exists('logs'):
-        os.makedirs('logs')
-    file_handler = RotatingFileHandler(os.path.join('logs', log_file), maxBytes=1024*1024*5, backupCount=5)
+    log_dir = os.path.dirname(log_file)
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+    file_handler = RotatingFileHandler(log_file, maxBytes=1024*1024*5, backupCount=5)
     file_handler.setFormatter(formatter)
     
     # Setup stream (console) handler

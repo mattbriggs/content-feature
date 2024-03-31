@@ -87,6 +87,7 @@ This project is licensed under the MIT License - see the `LICENSE.md` file for d
 - NetworkX Contributors
 - And all other libraries and data sources utilized in this application.
 
----
+## Related content
 
-This overview and instructions template assumes that your application's source code, including all the components we've discussed, is organized and ready for use. Depending on the specific implementation details and file structure of your application, some paths or filenames may need to be adjusted.
+- [Semantic Mapper - Original sketch](appplication_orginal.md)
+- [Python Application Module Documentation](application_docs.md)

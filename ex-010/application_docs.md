@@ -15,6 +15,7 @@ The application consists of several interconnected modules, each responsible for
 - **Markdown Processor (`markdown_processor.py`)**: Processes each markdown file to extract entities, generates summaries, and performs basic sentiment analysis.
 - **Database Manager (`database_manager.py`)**: Manages a SQLite database to store information about markdown files, entities extracted, and summaries.
 - **Network Creator (`network_creator.py`)**: Uses the data stored in the database to create a semantic network of entities and saves it in a `.graphml` format.
+- **Taxonomy Creator (`taxonomy_creator.py`)**: Organizes entities into a hierarchy based on similarity and outputs the taxonomy as an OPML file.
 - **Template Renderer (`template_renderer.py`)**: Formats the processed data into an HTML document using mustache templates.
 - **Logger Setup (`logger_setup.py`)**: Configures global logging for the application, ensuring all modules log their activity consistently.
 
@@ -43,6 +44,9 @@ classDiagram
     class NetworkCreator {
         +create_semantic_network(db_file, output_graphml)
     }
+    class TaxonomyCreator {
+        +create_taxonomy_opml(db_file, output_opml)
+    }
     class TemplateRenderer {
         +render_template(template_path, data, output_path)
         +render_output_page(entities_info, template_file, output_html)
@@ -55,25 +59,18 @@ classDiagram
     MarkdownFinder --> MarkdownProcessor : "Provides list of markdown files"
     MarkdownProcessor --> DatabaseManager : "Sends processed data"
     DatabaseManager --> NetworkCreator : "Stores and retrieves data"
-    DatabaseManager --> TemplateRenderer : "Provides data for rendering"
+    DatabaseManager --> TaxonomyCreator : "Provides data for taxonomy"
+    TaxonomyCreator --> TemplateRenderer : "Taxonomy data for rendering"
     LoggerSetup ..> ConfigLoader
     LoggerSetup ..> MarkdownFinder
     LoggerSetup ..> MarkdownProcessor
     LoggerSetup ..> DatabaseManager
     LoggerSetup ..> NetworkCreator
+    LoggerSetup ..> TaxonomyCreator
     LoggerSetup ..> TemplateRenderer : "Logs activity"
 ```
 
-This Mermaid.js syntax describes the application's components and their relationships:
-
-- Arrows (`-->`) indicate a direct data flow or dependency between components.
-- Dotted lines (`..>`) represent a logging relationship, indicating that these components utilize the LoggerSetup for logging purposes.
-
-You can render this diagram in any Markdown viewer that supports Mermaid.js syntax, such as GitHub or GitLab, or in dedicated Mermaid live editors and visualization tools.
-
 ## Flow of information
-
-Below is a Mermaid.js syntax diagram that illustrates the workflow of information through your system, highlighting how each component interacts and the sequence of operations from reading the configuration to rendering the output page.
 
 ### Process Flow Diagram
 
@@ -85,8 +82,10 @@ graph TD
     C -->|No Files| E[Log Error and End]
     D --> F[Save Data to Database]
     F --> G[Create Semantic Network]
-    G --> H[Render Output Page]
-    H --> I[End]
+    F --> H[Create Taxonomy OPML]
+    G --> I[Render Output Page]
+    H --> I
+    I --> J[End]
 
     subgraph logging [Logging Setup]
         B -.-> L[Log Operations]
@@ -95,26 +94,27 @@ graph TD
         F -.-> L
         G -.-> L
         H -.-> L
+        I -.-> L
     end
 ```
 
 ### Workflow Description:
 
 1. **Start**: The entry point of the application.
-2. **Load Config**: The `config_loader.py` loads directories to search from a YAML configuration file.
-3. **Find Markdown Files**: The `markdown_finder.py` module searches the specified directories for markdown files.
-   - If no markdown files are found, an error is logged, and the process ends.
-4. **Process Markdown Files**: The `markdown_processor.py` analyzes the markdown files to extract entities and generate summaries.
-5. **Save Data to Database**: The `database_manager.py` stores the extracted information (entities, summaries) in a SQLite database.
-6. **Create Semantic Network**: The `network_creator.py` uses the information in the database to build a semantic network of entities, saving it as a `.graphml` file.
-7. **Render Output Page**: The `template_renderer.py` formats the processed data into an HTML document using a mustache template.
-8. **End**: The final step in the workflow, where the process concludes successfully.
+2. **Load Config**: Loads directories from a YAML configuration file.
+3. **Find Markdown Files**: Searches directories for markdown files.
+4. **Process Markdown Files**: Extracts entities and generates summaries from markdown files.
+5. **Save Data to Database**: Stores the processed information in a database.
+6. **Create Semantic Network**: Builds a semantic network from the entities and saves it as a `.graphml` file.
+7.
 
-The **Logging Setup** (represented as `logging` in the diagram) is a cross-cutting concern that interacts with all major steps of the process, ensuring that operations are logged throughout the application's execution.
+ **Create Taxonomy OPML**: Organizes entities into a hierarchy based on similarity and outputs as an OPML file.
+8. **Render Output Page**: Formats the processed data into an HTML document using mustache templates.
+9. **End**: The final step in the workflow.
 
-This workflow diagram provides a high-level overview of the application's process flow, making it easier to understand how information moves through the system and how the components interact with each other. You can use this diagram in documentation or as a guide for further development and debugging.
+The **Logging Setup** is a cross-cutting concern that interacts with all major steps of the process, ensuring operations are logged throughout the application's execution.
 
-
+This updated documentation includes the `taxonomy_creator.py` module and adjusts the Mermaid.js diagrams to reflect the taxonomy creation process as an integral part of the application workflow.
 ## Parts of the application
 
 ### `config_loader.py`
@@ -176,10 +176,31 @@ Formats output pages using mustache templates.
 
 Configures the logging for the application, ensuring that log messages are both printed to the console and written to a log file.
 
+Certainly! Below is a description of the `taxonomy_creator` module and its main function for inclusion in the functions section of your application documentation.
+
+### `taxonomy_creator.py`
+
+The `taxonomy_creator.py` module is designed to organize entities extracted from markdown files into a hierarchical structure based on their similarity. It leverages hierarchical clustering to understand and visualize the relationships between entities, ultimately outputting the taxonomy as an OPML file. This format is suitable for outlines, making it a versatile choice for representing hierarchical data.
+
+#### Functions:
+
+- **`create_taxonomy_opml(db_file, output_opml)`**: This is the primary function of the module. It takes the path to the SQLite database file (`db_file`) containing entities and their associated markdown files, and the path where the OPML file (`output_opml`) should be saved.
+
+    - **Parameters**:
+        - `db_file`: A string specifying the path to the SQLite database file. This database should contain the entities and the files they are associated with, as extracted and processed by previous components of the application.
+        - `output_opml`: A string specifying the output path for the OPML file that will represent the entity taxonomy.
+
+    - **Functionality**: The function first fetches entities and their occurrences from the database to construct an entity-file matrix. This matrix serves as the basis for calculating similarity between entities based on their co-occurrence across different markdown files. Hierarchical clustering is applied to this similarity matrix to deduce the hierarchical relationships between entities. The resulting hierarchical structure is then formatted into an OPML document, which is saved to the specified output path.
+
+    - **Outcome**: The OPML file created by this function represents the taxonomy of entities, organizing them into a hierarchy that reflects their relationships based on textual similarity. This file can be used in various applications that support OPML to visualize or further analyze the structure of knowledge contained in the processed markdown files.
+
+The `taxonomy_creator.py` module adds a critical layer of analysis to the application, enabling not just the extraction and processing of entities, but also the understanding of their interrelations in a structured format that is both human-readable and machine-processable.
+
 #### Functions:
 
 - `setup_logging(log_file, level)`: Sets up the application's logging configuration.
 
----
+## Related content
 
-Each module is designed to be independently functional, allowing for easy modification and testing. Together, they form a comprehensive system for analyzing, processing, and visualizing markdown file content.
+- [Semantic Mapper - Original sketch](appplication_orginal.md)
+- [MarkNet Analyzer](readme.md)
